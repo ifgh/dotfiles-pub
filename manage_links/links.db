@@ -12,3 +12,4 @@ work/dotfiles-pub/.screenrc	.screenrc
 work/dotfiles-pub/.tmux.conf	.tmux.conf
 work/dotfiles-pub/.xpdfrc	.xpdfrc
 work/dotfiles-pub/.Xresources	.Xresources
+../../work/dotfiles-pub/.fonts.conf	.config/fontconfig/fonts.conf
