@@ -1,0 +1,29 @@
+#!/bin/bash
+
+if [[ ! -f links.db ]]
+then
+	echo "No links.db in current directory." >&2
+	exit 1
+fi
+
+targetdir=${1:-$HOME}
+
+while read -r
+do
+	OIFS=$IFS
+	IFS=$'\t'
+	set -- $REPLY
+	IFS=$OIFS
+
+	target=$1
+	linkname=$2
+
+	(
+		cd "$targetdir"
+		echo mkdir -p "$(dirname "$linkname")"
+		mkdir -p "$(dirname "$linkname")"
+		echo ln -svi "$target" "$linkname"
+		ln -svi "$target" "$linkname" < /dev/tty
+	)
+
+done < links.db

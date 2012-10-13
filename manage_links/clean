@@ -1,0 +1,34 @@
+#!/bin/bash
+
+if [[ ! -f links.db ]]
+then
+	echo "No links.db in current directory." >&2
+	exit 1
+fi
+
+targetdir=${1:-$HOME}
+
+while read -r
+do
+	OIFS=$IFS
+	IFS=$'\t'
+	set -- $REPLY
+	IFS=$OIFS
+
+	target=$1
+	linkname=$2
+
+	(
+		cd "$targetdir"
+		if [[ -L "$linkname" ]]
+		then
+			echo -n "$linkname" "-> "
+			readlink -e "$linkname"
+			rm -vf "$linkname"
+			rmdir -vp "$(dirname "$linkname")"
+		else
+			echo "LINK $linkname MISSING OR NOT A LINK!"
+		fi
+	)
+
+done < links.db
