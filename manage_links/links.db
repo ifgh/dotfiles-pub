@@ -4,6 +4,7 @@ work/dotfiles-pub/.bash_logout	.bash_logout
 work/dotfiles-pub/.exrc	.exrc
 work/dotfiles-pub/.gdbinit	.gdbinit
 work/dotfiles-pub/.gtkrc-2.0	.gtkrc-2.0
+work/dotfiles-pub/.htoprc	.htoprc
 work/dotfiles-pub/.less	.less
 work/dotfiles-pub/.lesskey	.lesskey
 work/dotfiles-pub/.mailcap	.mailcap
