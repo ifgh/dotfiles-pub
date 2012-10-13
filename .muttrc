@@ -128,7 +128,7 @@ set mime_forward_rest=yes
 
 set sleep_time=0
 
-set pager_index_lines=7
+set pager_index_lines=20
 set pager_stop
 set tilde
 
