@@ -1,0 +1,20 @@
+urlCommand "firefox '%s'"
+psFile "|lpr"
+initialZoom page
+
+bind t any toggleOutline
+
+bind h any zoomIn
+bind l any zoomOut
+bind j any nextPage
+bind k any prevPage
+
+bind H any scrollLeft(16)
+bind L any scrollRight(16)
+bind K any scrollUp(16)
+bind J any scrollDown(16)
+
+bind f any followLink
+
+bind ctrl-o any goBackward
+bind ctrl-i any goForward
