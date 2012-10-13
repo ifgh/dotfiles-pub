@@ -1,4 +1,4 @@
-urlCommand "firefox '%s'"
+urlCommand "browser-wrapper '%s'"
 psFile "|lpr"
 initialZoom page
 
