@@ -1,0 +1,7 @@
+Configuration files.
+
+Note to self: Never commit private stuff here.
+
+This repository is stored on my drive as ~/work/dotfiles-pub. See the
+scripts in manage_links/ on how to create the actual symlinks for this
+repository. Private dotfiles are in ~/work/dotfiles.
