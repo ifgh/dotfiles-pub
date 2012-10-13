@@ -1,0 +1,67 @@
+# -------------
+# Terminal-Optionen
+
+hardstatus on
+# Was dort anzeigen: "%h" falls gesetzt, sonst "%t" (siehe manpage)
+hardstatus string "%?%h%:%t%?"
+# Gib Screen bekannt, wie die Hardline des Terminals funktioniert und
+# dass es eine hat.
+termcapinfo xterm* 'hs:ts=\E]0;:fs= (screen)\007:ds=\E]0;screen\007'
+
+# Das hier ermöglicht die Nutzung der xterm-Scrollbar bzw. Shift+PageUp:
+termcapinfo xterm* ti@:te@
+
+
+# -------------
+# Komfortkrams
+
+vbell off
+startup_message off
+shell -${SHELL}
+
+# Ein ausreichender Buffer.
+defscrollback 5000
+
+# Mache Alternate Screen Switching!
+# Mal aus. Ich verwende screen nicht mehr "hauptberuflich", sondern nur
+# für "starte mutt nur ein einziges Mal".
+#altscreen on
+
+
+# -------------
+# Zeigt unten (bei Split) eine Leiste mit offenen Fenstern an und zwar
+# so, dass erst die Windowliste bis ausschließlich dem aktuellen Fenster
+# kommt, dann hervorgehoben dieses und abschließend der Rest der Liste.
+
+caption splitonly
+caption string '%{= Bk}%-w%{=b ky}%n %t%{-}%+w %=%{=b ky} %0c '
+
+
+# -------------
+# Keybinds:
+
+bind p screen ncmpcpp
+bind y screen dvtm
+bind t screen -t "t" 6 su - torrent -c 'rtorrent'
+bind o screen -t "m" 7 muttgit
+bind i screen -t "i" 9 weechatgit
+bind l screen lynx
+
+# Dieser letzte Keybind liest diese Datei neu ein. Das ist insbesondere
+# für das Setzen von $TERM (siehe oben) wichtig.
+bind r source $HOME/.screenrc
+
+
+# -------------
+# Überschreibende Sachen je nach Terminal
+
+# Normalerweise setzt Screen die $TERM-Variable neu. Das ist aber sehr
+# nervig, denn dadurch werden die eigentlichen Capabilities des Terms
+# verschleiert (256 Farben zum Beispiel). Workaround könnte sein:
+#term $TERM
+# Das hat aber viele Nebeneffekte. Aufwändiger, aber sauberer ist das
+# hier:
+source $HOME/work/dotfiles-pub/.screenrc-$TERM
+# Dort werden dann die screen-eigenen $TERM-Varianten gesetzt. Wenn es
+# die Datei zum aktuellen Terminal nicht gibt, dann schreibt er eine
+# Fehlermeldung hin und macht mit den Defaults weiter.
