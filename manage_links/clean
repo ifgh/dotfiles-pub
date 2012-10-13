@@ -30,7 +30,10 @@ do
 			rm -vf "$linkname"
 			rmdir -vp "$(dirname "$linkname")"
 		else
+			tput bold
+			tput setaf 1
 			echo "LINK $linkname MISSING OR NOT A LINK!"
+			tput sgr0
 		fi
 	)
 
