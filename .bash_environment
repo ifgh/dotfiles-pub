@@ -44,7 +44,7 @@ else
 	colors_none
 fi
 
-eval $(dircolors ~/work/dotfiles/.dircolors)
+eval $(dircolors ~/work/dotfiles-pub/.dircolors)
 
 # -------------
 # Sonstiges Environment.
