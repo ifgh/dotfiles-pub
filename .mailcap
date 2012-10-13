@@ -1,0 +1,35 @@
+image/jpeg; feh %s; test=test -n "$DISPLAY"
+image/png; feh %s; test=test -n "$DISPLAY"
+image/gif; feh %s; test=test -n "$DISPLAY"
+image/tiff; feh %s; test=test -n "$DISPLAY"
+image/x-xbitmap; feh %s; test=test -n "$DISPLAY"
+image/*; feh %s; test=test -n "$DISPLAY"
+
+audio/basic; mplayer %s; needsterminal
+audio/*; mplayer %s; needsterminal
+video/mpeg; mplayer %s; needsterminal
+video/quicktime; mplayer %s; needsterminal
+video/*; mplayer %s; needsterminal
+
+application/x-dvi; xdvi %s; test=test -n "$DISPLAY"
+application/pdf; pdf-viewer %s; test=test -n "$DISPLAY"
+application/x-pdf; pdf-viewer %s; test=test -n "$DISPLAY"
+application/acrobat; pdf-viewer %s; test=test -n "$DISPLAY"
+
+application/postscript; ps2ascii %s; needsterminal; copiousoutput
+application/postscript; gv %s; test=test -n "$DISPLAY"
+
+application/msword; antiword %s; needsterminal; copiousoutput
+application/msword; libreoffice %s; test=test -n "$DISPLAY"
+application/vnd.ms-office; libreoffice %s; test=test -n "$DISPLAY"
+application/vnd.ms-excel; libreoffice %s; test=test -n "$DISPLAY"
+application/vnd.ms-powerpoint; libreoffice %s; test=test -n "$DISPLAY"
+
+text/html; elinks -localhost -dump -dump-charset utf-8 -default-mime-type text/html %s; needsterminal; copiousoutput
+
+application/zip; unzip -l %s; needsterminal; copiousoutput
+application/x-gzip-compressed; tar -tf %s; needsterminal; copiousoutput
+application/x-gtar; tar -tf %s; needsterminal; copiousoutput
+
+text/*; vim %s; needsterminal
+text/*; vim-xterm %s; test=test -n "$DISPLAY"
