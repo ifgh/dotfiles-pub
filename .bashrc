@@ -58,6 +58,14 @@ mkdir -p /tmp/tmp/youtube
 # Paste initialisieren.
 stouch
 
+
+# -------------
+# Eventuell lokal Dinge überschreiben
+
+[[ -r ~/work/dotfiles/.bashrc-local ]] && .  ~/work/dotfiles/.bashrc-local
+
+
+# -------------
 # Auf tty2 ins X starten, aber mit exec. Das lässt dann keine benutzbare
 # Shell offen, auf die man mit Strg+Alt+F2 wechseln könnte. Wichtig
 # jetzt bei systemd ist, dass das Teil auf vt2 läuft, damit die Session
