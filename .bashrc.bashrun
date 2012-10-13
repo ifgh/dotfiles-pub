@@ -1,0 +1,18 @@
+# Meine Aliases und Funktionen will ich verfügbar haben.
+. ~/work/dotfiles-pub/.bash_aliases
+. ~/work/dotfiles-pub/.bash_functions
+
+PS1='> '
+unset PROMPT_COMMAND
+
+hook()
+{
+	bash -c "$BASH_COMMAND" 1>&1 2>&2 0<&0 &
+	exit
+}
+
+# Dieser Trap sorgt dafür, dass obige Funktion vor dem Ausführen eines
+# Befehls ausgeführt wird. In $BASH_COMMAND steht dann, was es gewesen
+# wäre. Dort oben wird dann geforkt, das Ding ausgeführt und die
+# ursprüngliche Shell und damit auch das Terminal beendet.
+trap hook DEBUG

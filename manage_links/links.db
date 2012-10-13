@@ -1,3 +1,6 @@
+work/dotfiles-pub/.bash_profile	.bash_profile
+work/dotfiles-pub/.bashrc	.bashrc
+work/dotfiles-pub/.bash_logout	.bash_logout
 work/dotfiles-pub/.exrc	.exrc
 work/dotfiles-pub/.less	.less
 work/dotfiles-pub/.lesskey	.lesskey
