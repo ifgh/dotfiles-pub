@@ -13,6 +13,12 @@ endif
 
 
 " -------------
+" Zusätzliche Pakete, die nicht systemweit installiert sind.
+
+set runtimepath+=~/work/vim/ubuntuusers-vim
+
+
+" -------------
 " Leader auf's Komma
 
 let mapleader=","
