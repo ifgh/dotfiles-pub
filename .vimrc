@@ -31,9 +31,9 @@ let maplocalleader=","
 nmap <Leader>dotv :tabe $MYVIMRC<CR>
 nmap <Leader>dotV :source $MYVIMRC<CR>
 nmap <Leader>dotb :tabe ~/.bashrc<CR>
-			\:tabe ~/work/dotfiles/.bash_aliases<CR>
-			\:tabe ~/work/dotfiles/.bash_functions<CR>
-			\:tabe ~/work/dotfiles/.bash_environment<CR>
+			\:tabe ~/work/dotfiles-pub/.bash_aliases<CR>
+			\:tabe ~/work/dotfiles-pub/.bash_functions<CR>
+			\:tabe ~/work/dotfiles-pub/.bash_environment<CR>
 nmap <Leader>dotm :tabe ~/.muttrc<CR>
 nmap <Leader>dotx :tabe ~/.Xresources<CR>
 nmap <Leader>dota :tabe ~/work/dotfiles/.awesome/rc.lua<CR>
