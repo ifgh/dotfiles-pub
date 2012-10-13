@@ -1,0 +1,217 @@
+# -------------
+# Basics
+
+# Zur Person, Alternates, ...
+source ~/work/dotfiles/.mutt-personal
+
+# Wenn du auf Mails antwortest, dann schaue, ob der Empfänger in dieser
+# Mail einer deiner Alternates ist. Falls ja, dann benutze das als
+# Abswender für die Antwortmail.
+set reverse_name=yes
+
+# Grundlegendes Maildir-Setup:
+set mbox_type=Maildir
+set spoolfile="~/Mail"
+
+# Wird unten durch einen Hook überschrieben, aber wird trotzdem so
+# gesetzt (und die Box existiert auch), damit im Zweifelsfalle die Mails
+# dort landen anstatt verloren zu gehen.
+set record="+sent"
+
+# Nur Mailboxen anzeigen, in denen auch neue Mail ist. Falls es dann
+# aber gar keine Mailbox gibt, zeige alle an.
+set sort_browser=alpha
+mailboxes `muttautoboxes`
+
+# Wohin kommen "Entwürfe"?
+set postponed="~/Mail/postponed"
+
+# msmtp
+set sendmail="/usr/bin/msmtp"
+set use_envelope_from=yes
+
+# Editor / composing
+set edit_headers=yes
+set editor="vim -c 'set textwidth=72' -c 'set ft=mailgroff' +"
+
+
+# -------------
+# Keybinds:
+
+macro generic ,1 ':set sendmail="/usr/bin/msmtp"'
+macro generic ,2 ':set sendmail="/usr/bin/msmtp -a alice"'
+
+bind pager "J" next-line
+bind pager "K" previous-line
+bind index "<esc>n" search-opposite
+bind pager "<esc>n" search-opposite
+
+bind pager "H" display-toggle-weed
+bind pager "h" exit
+bind index "h" display-message
+bind index "l" display-message
+
+macro browser "r" '!mpop -a<Enter>'
+bind browser "R" check-new
+
+macro index "<esc>c" '!mailcommit<Enter>'
+macro browser "<esc>c" '!mailcommit<Enter>'
+
+# urlview
+macro index,pager,attach,compose \cb "\
+<enter-command> set my_pipe_decode=\$pipe_decode pipe_decode<Enter>\
+<pipe-message> urlview<Enter>\
+<enter-command> set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<Enter>" \
+"call urlview to extract URLs out of a message"
+
+# podget
+macro index,pager,attach,compose \cp "\
+<enter-command> set my_pipe_decode=\$pipe_decode pipe_decode<Enter>\
+<pipe-message> podget<Enter>\
+<enter-command> set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<Enter>" \
+"call urlview to extract URLs out of a message"
+
+
+# -------------
+# 8 Farben
+
+# - Mails und Header -
+color header brightgreen default ^From:
+color header brightyellow default ^Subject:
+color header brightcyan default ^To:
+color header brightcyan default ^Cc:
+color header red default ^User-Agent:
+color header yellow default ^Content-Type:
+color header black yellow ^Message-ID:
+color header black yellow ^References:
+color header black yellow ^In-Reply-To:
+ignore *
+unignore from
+unignore to
+unignore cc
+unignore subject
+
+color attachment black green
+
+# - Index -
+color index green default ~N        # new message
+color index cyan default ~O         # old unread message
+color index red default ~D          # deleted message
+color index brightblack default ~P  # messages from me
+color indicator black cyan
+color tree red default
+
+# - Quote-Levels -
+color quoted   cyan default
+color quoted1  yellow default
+color quoted2  red default
+color quoted3  green default
+color quoted4  cyan default
+color quoted5  yellow default
+color quoted6  red default
+color quoted7  green default
+
+# - Misc -
+color markers brightcyan default    # wrap marker
+color status brightwhite blue
+
+
+# -------------
+# Kleine Tweaks:
+
+set include=ask-yes	# ask whether to cite a mail when replying
+set fast_reply		# nicht jedesmal *alles* nachfragen
+set hidden_host=yes	# kein "mobiltux.OurLAN" da reintun...
+
+set mime_forward=yes		# attachments forwarden statt quote
+set mime_forward_rest=yes
+
+set sleep_time=0
+
+set pager_index_lines=7
+set pager_stop
+set tilde
+
+
+# -------------
+# Thread-Sortierung und Mailinglisten
+
+# Die Listen kennen wir (subscribe foo...)
+source ~/work/dotfiles/.mutt-lists
+
+# Globale Sortierung und slrn-style-Kollabieren
+bind index - collapse-thread
+macro index "<esc>y" ":set sort=threads"
+macro index "<esc>x" ":set sort=date"
+
+# Eigentlich will ich ausgehende Mail im aktuellen Ordner auch
+# speichern, damit ich die kompletten Threads beisammen habe. Bei
+# Mailinglisten ist das aber nicht so praktisch, weil man da in der
+# Regel seine eigene Mail über die Liste nochmal kriegt. Speichere das
+# Zeug vorübergehend in +sent.
+folder-hook !^list_ 'set record="^"'
+folder-hook ^list_ 'set record="+sent"'
+
+# In allen Ordnern ausser sent mit kollabierten Threads starten, sofern
+# sie keine ungelesenen Mails enthalten. Im sent-Ordner aber nach Datum.
+unset collapse_unread
+folder-hook !^sent set sort=threads
+folder-hook !^sent set sort_aux=date-sent
+folder-hook !^sent 'push \eV'
+folder-hook ^sent set sort=date-sent
+folder-hook !^feeds set strict_threads=yes
+folder-hook !^feeds set sort_re=yes
+
+# Feeds auch Threading, aber sekundäres Sortieren nach From (das
+# passiert hauptsächlich). Außerdem sehr lässige Threading-Policy.
+folder-hook ^feeds set sort=threads
+folder-hook ^feeds set sort_aux=from
+folder-hook ^feeds set strict_threads=no
+folder-hook ^feeds set sort_re=no
+
+# Kein Header Cache in den Feeds.
+folder-hook ^feeds unset header_cache
+folder-hook !^feeds set header_cache="~/Mail/.headercache"
+
+
+# -------------
+# Formate
+
+# Globales Format ähnlich slrn
+folder-hook !^sent 'set index_format = "%Z│%-15.15L│%3M│%s %* │%[%y-%m-%d %H:%M]"'
+
+# Im sent etwas anders:
+# - immer der Adressat
+# - keine Thread-Infos
+folder-hook ^sent 'set index_format = "%Z│%-15.15t│%s %* │%[%y-%m-%d %H:%M]"'
+
+# Übersicht der Mailboxen und Dirlistings:
+set folder_format = "%2C %t %N %8s    %d    %f"
+
+
+# -------------
+# Adressbuch
+
+set query_command = "$HOME/work/python/contacts/mutt_query"
+
+
+# -------------
+# GnuPG:
+
+source /etc/Muttrc.gpg.dist
+set crypt_autosign=yes
+set pgp_auto_decode=yes
+set fcc_clear=yes
+
+
+# -------------
+# Druck über Vim
+
+set print_command = "vim -R -c 'set ft=mail background=dark \
+					popt=header:0' -c 'ha' -c 'q' -"
+
+
+# -------------
+# Eventuell Dinge überschreiben
+
+source ~/work/dotfiles/.mutt-local
