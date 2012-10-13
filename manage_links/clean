@@ -1,8 +1,11 @@
 #!/bin/bash
 
-if [[ ! -f links.db ]]
+linkfile=links.db
+[[ -f "links-$HOSTNAME.db" ]] && linkfile="links-$HOSTNAME.db"
+
+if [[ ! -f "$linkfile" ]]
 then
-	echo "No links.db in current directory." >&2
+	echo "No link db in current directory." >&2
 	exit 1
 fi
 
@@ -31,4 +34,4 @@ do
 		fi
 	)
 
-done < links.db
+done < "$linkfile"
