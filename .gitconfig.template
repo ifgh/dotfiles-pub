@@ -1,9 +1,6 @@
-# This is not a real ~/.gitconfig. Use it as a template.
-
 [user]
-	name = TODO
-	email = TODO
-
+	name = &(NAME)
+	email = &(EMAIL)
 [color]
 	ui = auto
 	branch = auto
