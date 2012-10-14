@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd -- "$(dirname "$0")"
+cd -- "$(dirname "$(readlink -e "$0")")"
 
 linkfile=links.db
 [[ -f "links-$HOSTNAME.db" ]] && linkfile="links-$HOSTNAME.db"
@@ -47,4 +47,5 @@ You may want to perform a manual clean up from time to time:
 
 This process is not automated because it takes a very long time to scan
 your whole home directory.
+
 EOF

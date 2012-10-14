@@ -1,0 +1,5 @@
+You can automate the update process by using this script as a hook:
+
+$ cd .git/hooks/
+$ ln -s ../../manage_links/create post-commit
+$ ln -s ../../manage_links/create post-merge
