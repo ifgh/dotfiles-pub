@@ -1,0 +1,50 @@
+#!/bin/bash
+
+cd -- "$(dirname "$0")"
+
+linkfile=links.db
+[[ -f "links-$HOSTNAME.db" ]] && linkfile="links-$HOSTNAME.db"
+
+if [[ ! -f "$linkfile" ]]
+then
+	echo "No link db in current directory." >&2
+	exit 1
+fi
+
+targetdir=${1:-$HOME}
+linkfile=$(readlink -e "$linkfile")
+cd "$targetdir"
+
+while IFS=$'\t' read -r target linkname
+do
+	(
+	if [[ -e "$linkname" ]]
+	then
+		if [[ ! -L "$linkname" ]]
+		then
+			echo "\`$linkname' exists and is not a symlink, will be deleted:"
+			tree -aC "$linkname"
+			rm -Rvi "$linkname"
+		else
+			rm -v "$linkname"
+		fi
+	fi
+
+	ln -svi "$target" "$linkname"
+	) < /dev/tty
+
+	echo
+done < "$linkfile"
+
+cat <<EOF
+
+Remember:
+
+This script does not clean up old symlinks which are no longer tracked.
+You may want to perform a manual clean up from time to time:
+
+	find ~ -type l ! -exec test -r {} \; -print
+
+This process is not automated because it takes a very long time to scan
+your whole home directory.
+EOF
