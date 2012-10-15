@@ -30,6 +30,7 @@ do
 		fi
 	fi
 
+	mkdir -p "$(dirname "$linkname")"
 	ln -svi "$target" "$linkname"
 	) < /dev/tty
 
