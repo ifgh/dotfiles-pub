@@ -1,0 +1,8 @@
+[default]
+# Write your default config options here!
+
+ao=alsa
+softvol=yes
+softvol-max=200
+nolirc=true
+osdlevel=3
