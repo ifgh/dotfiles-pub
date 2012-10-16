@@ -76,6 +76,7 @@ static const char *playclipcmd[] = { "play-clipboard-url", NULL };
 static const char *browseclipcmd[] = { "browser-clipboard", NULL };
 static const char *showcallscmd[] = { "terminal-wrapper", "-name", "xterm-floating", "-e", "show-calllog", NULL };
 static const char *scrotcmd[] = { "scrot", NULL };
+static const char *slockcmd[] = { "slock", NULL };
 
 static const char *audiomutecmd[] = { "control_volume", "toggle", NULL };
 static const char *audiolowercmd[] = { "control_volume", "down", NULL };
@@ -103,6 +104,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      spawn,          {.v = browseclipcmd } },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = showcallscmd } },
 	{ MODKEY,                       XK_Print,  spawn,          {.v = scrotcmd } },
+	{ MODKEY|ShiftMask|ControlMask, XK_l,      spawn,          {.v = slockcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
