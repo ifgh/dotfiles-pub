@@ -11,9 +11,9 @@ then
 	exit 1
 fi
 
-targetdir=${1:-$HOME}
 linkfile=$(readlink -e "$linkfile")
-cd "$targetdir"
+
+cd
 
 while IFS=$'\t' read -r target linkname
 do
