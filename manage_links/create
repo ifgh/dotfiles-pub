@@ -1,13 +1,21 @@
 #!/bin/bash
 
-cd -- "$(dirname "$(readlink -e "$0")")"
+if [[ ! -d .git ]]
+then
+	cat >&2 <<-EOF
+	This script ($0) is meant to be called from the root of your git
+	repo. The best way to do this is to use it as a hook.
+	EOF
+	exit 1
+fi
 
-linkfile=links.db
-[[ -f "links-$HOSTNAME.db" ]] && linkfile="links-$HOSTNAME.db"
+linkdir=manage_links
+linkfile="$linkdir/links.db"
+[[ -f "$linkdir/links-$HOSTNAME.db" ]] && linkfile="$linkdir/links-$HOSTNAME.db"
 
 if [[ ! -f "$linkfile" ]]
 then
-	echo "No link db in current directory." >&2
+	echo "No link db found." >&2
 	exit 1
 fi
 
