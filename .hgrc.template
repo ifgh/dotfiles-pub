@@ -1,0 +1,9 @@
+[ui]
+username = &(USERNAME)
+
+[alias]
+show = log -pr
+
+[extensions]
+hgext.hgk =
+color =
