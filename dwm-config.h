@@ -25,6 +25,7 @@ static const Rule rules[] = {
 	{ "luakit",         NULL,              NULL,       1 << (1 - 1),  False,       -1 },
 	{ "Firefox",        NULL,              NULL,       1 << (1 - 1),  False,       -1 },
 	{ "XTerm",          "xterm-irc",       NULL,       1 << (2 - 1),  False,       -1 },
+	{ "XTerm",          "xterm-jabber",    NULL,       1 << (2 - 1),  False,       -1 },
 	{ "Gimp",           NULL,              NULL,       1 << (8 - 1),  False,       -1 },
 	{ "qemu",           NULL,              NULL,       0,             True,        -1 },
 	{ "Avidemux2_gtk",  NULL,              NULL,       0,             True,        -1 },
@@ -69,6 +70,7 @@ static const char *termfscmd[]  = { "xterm", "-name", "xterm-fullscreenwork", NU
 static const char *browsercmd[] = { "browser-wrapper", NULL };
 static const char *mailcmd[] = { "terminal-wrapper", "-e", "smail", NULL };
 static const char *irccmd[] = { "terminal-wrapper", "-name", "xterm-irc", "-e", "irc", NULL };
+static const char *jabbercmd[] = { "terminal-wrapper", "-name", "xterm-jabber", "-e", "jabber", NULL };
 static const char *playercmd[] = { "terminal-wrapper", "-e", "ncmpcpp", NULL };
 static const char *mixercmd[] = { "terminal-wrapper", "-e", "alsamixer", NULL };
 static const char *urlshowcmd[] = { "terminal-wrapper", "-name", "xterm-floating", "-e", "im-urlchoice", NULL };
@@ -97,6 +99,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = browsercmd } },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = mailcmd } },
 	{ MODKEY|ShiftMask,             XK_i,      spawn,          {.v = irccmd } },
+	{ MODKEY|ShiftMask,             XK_z,      spawn,          {.v = jabbercmd } },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = playercmd } },
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          {.v = mixercmd } },
 	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = urlshowcmd } },
