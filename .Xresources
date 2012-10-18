@@ -94,6 +94,12 @@ XTerm*VT100.Translations: #override \
 		Ctrl<Key>plus: larger-vt-font() \n\
 		Ctrl<Key>minus: smaller-vt-font() \n
 
+! URLs
+XTerm*on2Clicks: regex [^/@ \n]+
+XTerm*on3Clicks: regex [^ \n]+
+XTerm*on4Clicks: regex [^#$]+
+XTerm*on5Clicks: line
+
 ! Zeige den Mauscursor immer an.
 XTerm*pointerMode: 0
 
