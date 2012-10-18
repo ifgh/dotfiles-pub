@@ -488,6 +488,7 @@ alias online   = status online
 alias away     = status away
 alias dnd      = status dnd
 alias notavail = status notavail
+alias rsearch  = roster search
 #alias names = room names
 #alias topic = room topic
 
