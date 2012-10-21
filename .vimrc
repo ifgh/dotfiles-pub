@@ -123,7 +123,7 @@ map <F12> :noh<CR>
 " Tabs und Umbrüche kontrollieren
 set tw=72
 set nolist
-set number
+set nonumber
 set ai tabstop=4 sw=4
 set linebreak
 if (&term =~ '^xterm' || &term =~ '^rxvt')
