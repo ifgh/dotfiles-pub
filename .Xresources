@@ -1,4 +1,25 @@
 ! ---------------------------------------------------------------------
+! Excerpt from "man xrdb":
+!
+!       SRVR_name
+!               the  SERVERHOST  hostname  string  turned  into a legal
+!               identifier.  For example, "my-dpy.lcs.mit.edu"  becomes
+!               SRVR_my_dpy_lcs_mit_edu.
+!
+! So, if you want to apply some settings only to a certain machine, do
+! it that way:
+!
+! #ifdef SRVR_jupiter
+! ... only on host jupiter ...
+! #else
+! #endif
+!
+! This is easier than using SERVERHOST directly because there is no need
+! to define a symbol for each host.
+!
+
+
+! ---------------------------------------------------------------------
 ! Mauszeiger
 
 Xcursor.theme: default
@@ -32,7 +53,11 @@ XTerm*omitTranslation: fullscreen
 ! jetzigen Hardware ist XFT zu langsam. Es flackert. Du wirst dich nicht
 ! daran gewöhnen.
 XTerm*font3: -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+#ifdef SRVR_sedna
+XTerm*font:  -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+#else
 XTerm*font:  -*-vga-*-*-*-*-16-*-*-*-*-*-iso10646-*
+#endif
 XTerm*font4: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
 XTerm*font5: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
 XTerm*font6: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
