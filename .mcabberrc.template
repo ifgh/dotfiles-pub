@@ -150,7 +150,7 @@ set cmdhistory_lines = 250
 # are used at startup time.
 set logging = 1
 set load_logs = 1
-set logging_dir = ~/.mcabber/histo/
+set logging_dir = ~/.mcabber/histo&(logging_extension)/
 set logging_ignore_status = 1
 
 # Set log_muc_conf to 1 to enable MUC chatrooms logging (default = 0)
