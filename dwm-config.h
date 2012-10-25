@@ -22,21 +22,22 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class            instance           title       tags mask      isfloating   monitor */
-	{ "luakit",         NULL,              NULL,       1 << (1 - 1),  False,       -1 },
-	{ "Firefox",        NULL,              NULL,       1 << (1 - 1),  False,       -1 },
-	{ "XTerm",          "xterm-irc",       NULL,       1 << (2 - 1),  False,       -1 },
-	{ "XTerm",          "xterm-jabber",    NULL,       1 << (2 - 1),  False,       -1 },
-	{ "Gimp",           NULL,              NULL,       1 << (8 - 1),  False,       -1 },
-	{ "qemu",           NULL,              NULL,       0,             True,        -1 },
-	{ "Avidemux2_gtk",  NULL,              NULL,       0,             True,        -1 },
-	{ "XTerm",          "xterm-floating",  NULL,       0,             True,        -1 },
-	{ "feh",            NULL,              NULL,       0,             True,        -1 },
-	{ "Gitk",           NULL,              NULL,       0,             True,        -1 },
-	{ "Hgk",            NULL,              NULL,       0,             True,        -1 },
-	{ "Xpdf",           NULL,              NULL,       0,             True,        -1 },
-	{ "Mirage",         NULL,              NULL,       0,             True,        -1 },
-	{ "MPlayer",        NULL,              NULL,       0,             True,        -1 },
-	{ "VirtualBox",     NULL,              NULL,       0,             True,        -1 },
+	{ "luakit",         NULL,                   NULL,       1 << (1 - 1),  False,       -1 },
+	{ "Firefox",        NULL,                   NULL,       1 << (1 - 1),  False,       -1 },
+	{ "XTerm",          "xterm-irc",            NULL,       1 << (2 - 1),  False,       -1 },
+	{ "XTerm",          "xterm-jabber",         NULL,       1 << (2 - 1),  False,       -1 },
+	{ "XTerm",          "xterm-jabbersupport",  NULL,       1 << (2 - 1),  False,       -1 },
+	{ "Gimp",           NULL,                   NULL,       1 << (8 - 1),  False,       -1 },
+	{ "qemu",           NULL,                   NULL,       0,             True,        -1 },
+	{ "Avidemux2_gtk",  NULL,                   NULL,       0,             True,        -1 },
+	{ "XTerm",          "xterm-floating",       NULL,       0,             True,        -1 },
+	{ "feh",            NULL,                   NULL,       0,             True,        -1 },
+	{ "Gitk",           NULL,                   NULL,       0,             True,        -1 },
+	{ "Hgk",            NULL,                   NULL,       0,             True,        -1 },
+	{ "Xpdf",           NULL,                   NULL,       0,             True,        -1 },
+	{ "Mirage",         NULL,                   NULL,       0,             True,        -1 },
+	{ "MPlayer",        NULL,                   NULL,       0,             True,        -1 },
+	{ "VirtualBox",     NULL,                   NULL,       0,             True,        -1 },
 };
 
 /* layout(s) */
@@ -71,7 +72,7 @@ static const char *browsercmd[] = { "browser-wrapper", NULL };
 static const char *mailcmd[] = { "terminal-wrapper", "-e", "smail", NULL };
 static const char *irccmd[] = { "terminal-wrapper", "-name", "xterm-irc", "-e", "irc", NULL };
 static const char *jabbercmd[] = { "terminal-wrapper", "-name", "xterm-jabber", "-e", "jabber", NULL };
-static const char *jabbersupportcmd[] = { "terminal-wrapper", "-name", "xterm-jabber", "-e", "jabbersupport", NULL };
+static const char *jabbersupportcmd[] = { "terminal-wrapper", "-name", "xterm-jabbersupport", "-e", "jabbersupport", NULL };
 static const char *playercmd[] = { "terminal-wrapper", "-e", "ncmpcpp", NULL };
 static const char *mixercmd[] = { "terminal-wrapper", "-e", "alsamixer", NULL };
 static const char *urlshowcmd[] = { "terminal-wrapper", "-name", "xterm-floating", "-e", "im-urlchoice", NULL };

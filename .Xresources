@@ -130,6 +130,13 @@ XTerm*pointerMode: 0
 
 
 ! ---------------------------------------------------------------------
+! "support" flavour of mcabberrc
+
+xterm-jabbersupport*background: #001122
+xterm-jabbersupport*color0: #001122
+
+
+! ---------------------------------------------------------------------
 ! Fullscreen-XTerm
 
 xterm-fullscreenwork*internalBorder: 0
