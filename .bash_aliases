@@ -20,6 +20,7 @@ alias r='ranger'
 alias images='feh --force-aliasing -W 580 -tr'
 alias p='pdf-viewer'
 alias ww='wget -c'
+alias con='contacts_generic_query'
 
 alias m='mplayer'
 alias mmute='mplayer -ao null'

@@ -192,7 +192,7 @@ set folder_format = "%2C %t %N %8s    %d    %f"
 # -------------
 # Adressbuch
 
-set query_command = "$HOME/work/python/contacts/mutt_query"
+set query_command = "contacts_mutt_query"
 
 
 # -------------
