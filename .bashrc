@@ -66,19 +66,12 @@ stouch
 
 
 # -------------
-# Auf tty2 ins X starten, aber mit exec. Das lässt dann keine benutzbare
-# Shell offen, auf die man mit Strg+Alt+F2 wechseln könnte. Wichtig
-# jetzt bei systemd ist, dass das Teil auf vt2 läuft, damit die Session
-# authentifiziert bleibt. (Naja, gut, bei meinem Setup ist das nicht so
-# wahnsinnig wichtig, aber ich will es gleich richtig machen.) Dadurch
-# wird eigentlich auch das Argument mit exec überflüssig, weil man
-# sowieso nicht mehr auf vt2 wechseln kann -- da läuft ja schon X.
-xtty=2
-if [[ $(tty) == "/dev/tty$xtty" ]]
+# Auf tty2 ins X starten.
+if [[ $(tty) == "/dev/tty2" ]]
 then
 	mv -f ~/.xsession.log{,.old}
 	exec 1>~/.xsession.log
 	exec 2>&1
 	exec 0<&-
-	exec startx -- -nolisten tcp vt0$xtty
+	exec startx
 fi
