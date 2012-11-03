@@ -1,0 +1,18 @@
+# Reversed, das heißt, das hier ist eine dependecy vom normalen
+# Betriebstarget und die fragliche Aktion wird nur bei "Stop"
+# ausgeführt. Das ist vom Dependency-Baum her sinnvoller, weil es ja
+# tatsächlich nur gemacht werden soll, wenn wir aus dem normalen
+# Target herauskommen.
+
+[Unit]
+Description=Unmount all encfs mounts (as user %i)
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/bin/true
+ExecStop=/home/void/bin/eumount-all
+User=%i
+
+[Install]
+WantedBy=multi-user.target

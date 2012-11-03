@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Reminder:
+# This file is supposed to be placed in /usr/lib/systemd/system-sleep .
+
+case "$1" in
+	pre)
+		# noop
+		;;
+	post)
+		/home/void/bin/netbook-powersave
+		;;
+esac

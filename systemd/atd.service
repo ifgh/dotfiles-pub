@@ -1,0 +1,10 @@
+[Unit]
+Description=AT Daemon
+
+[Service]
+Type=forking
+PIDFile=/run/atd.pid
+ExecStart=/usr/sbin/atd
+
+[Install]
+WantedBy=multi-user.target

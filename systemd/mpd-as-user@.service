@@ -1,0 +1,7 @@
+.include /usr/lib/systemd/system/mpd.service
+
+[Unit]
+Description=Music Player Daemon (as user %i)
+
+[Service]
+User=%i

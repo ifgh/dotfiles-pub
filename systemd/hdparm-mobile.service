@@ -1,0 +1,7 @@
+[Unit]
+Description=Apply hdparm settings
+
+[Service]
+Type=simple
+ExecStart=/home/void/bin/hdparm-mobile
+TimeoutSec=0

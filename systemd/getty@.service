@@ -1,0 +1,4 @@
+.include /usr/lib/systemd/system/getty@.service
+
+[Service]
+TTYVTDisallocate=no

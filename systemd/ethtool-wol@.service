@@ -1,0 +1,8 @@
+[Unit]
+Description=Enable WOL via ethtool
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/ethtool -s %i wol g
+TimeoutSec=0

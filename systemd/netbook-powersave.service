@@ -1,0 +1,7 @@
+[Unit]
+Description=Apply powersave settings
+
+[Service]
+Type=simple
+ExecStart=/home/void/bin/netbook-powersave
+TimeoutSec=0

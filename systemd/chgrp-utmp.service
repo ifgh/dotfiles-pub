@@ -1,0 +1,7 @@
+[Unit]
+Description=chgrp of utmp to users
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/chgrp users /var/run/utmp
+TimeoutSec=0
