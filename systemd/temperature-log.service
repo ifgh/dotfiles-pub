@@ -1,0 +1,9 @@
+[Unit]
+Description=Temperature Log
+
+[Service]
+Type=simple
+ExecStart=/home/void/bin/temperature-log
+
+[Install]
+WantedBy=multi-user.target
