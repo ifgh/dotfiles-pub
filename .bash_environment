@@ -25,7 +25,7 @@ colors_8()
 
 colors_256()
 {
-	export PS1="$COLB_RESET$COLB_BOLD$COLB_FG_7\$ $COLB_RESET"
+	export PS1="$COLB_RESET$COLB_BOLD\$ $COLB_RESET"
 	export LESS_TERMCAP_mb="$COL_BOLD"             # Blink
 	export LESS_TERMCAP_md="$COL_BOLD$COL_FG_220"  # Bold
 	export LESS_TERMCAP_me="$COL_RESET"            # End Bold or Blink

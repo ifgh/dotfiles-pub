@@ -53,11 +53,7 @@ XTerm*omitTranslation: fullscreen
 ! jetzigen Hardware ist XFT zu langsam. Es flackert. Du wirst dich nicht
 ! daran gewöhnen.
 XTerm*font3: -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
-#ifdef SRVR_sedna
 XTerm*font:  -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
-#else
-XTerm*font:  -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
-#endif
 XTerm*font4: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
 XTerm*font5: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
 XTerm*font6: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
@@ -92,7 +88,6 @@ XTerm*color14:     #46a4ff
 XTerm*color7:      #cccccc
 XTerm*color15:     #ffffff
 
-#ifdef SRVR_sedna
 ! Bold wie am Linux VT: Grundsätzlich gibt es keine fetten Zeichen (die
 ! sehen mit dem VGA-Font furchtbar aus bzw. gehen mit kleinem Terminus
 ! gar nicht). Wurde explizit eine Farbe gesetzt und dann noch bold, dann
@@ -101,7 +96,6 @@ XTerm*color15:     #ffffff
 XTerm*boldMode:     false
 XTerm*colorBDMode:  true
 XTerm*colorBD:      #FFFFFF
-#endif
 
 ! UTF-8 im Titel:
 XTerm*utf8Title: 1
