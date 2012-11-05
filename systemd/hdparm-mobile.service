@@ -5,3 +5,6 @@ Description=Apply hdparm settings
 Type=simple
 ExecStart=/home/void/bin/hdparm-mobile
 TimeoutSec=0
+
+[Install]
+WantedBy=multi-user.target

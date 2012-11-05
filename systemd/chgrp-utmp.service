@@ -5,3 +5,6 @@ Description=chgrp of utmp to users
 Type=simple
 ExecStart=/usr/bin/chgrp users /var/run/utmp
 TimeoutSec=0
+
+[Install]
+WantedBy=multi-user.target
