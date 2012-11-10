@@ -11,6 +11,7 @@ work/dotfiles-pub/.lesskey	.lesskey
 work/dotfiles-pub/.mailcap	.mailcap
 work/dotfiles-pub/.muttrc	.muttrc
 work/dotfiles-pub/.mplayer	.mplayer
+work/dotfiles-pub/.urlview	.urlview
 work/dotfiles-pub/.vim	.vim
 work/dotfiles-pub/.vimrc	.vimrc
 work/dotfiles-pub/.gvimrc	.gvimrc
