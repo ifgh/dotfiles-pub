@@ -19,13 +19,6 @@ set runtimepath+=~/work/vim/ubuntuusers-vim
 
 
 " -------------
-" Leader auf's Komma
-
-let mapleader=","
-let maplocalleader=","
-
-
-" -------------
 " Komfortfunktionen für dotfiles
 
 nmap <Leader>dotv :tabe $MYVIMRC<CR>
