@@ -65,52 +65,26 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_run", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *termcmd[]  = { "xterm", NULL };
-static const char *termfscmd[]  = { "xterm", "-name", "xterm-fullscreenwork", NULL };
-static const char *browsercmd[] = { "browser-wrapper", NULL };
-static const char *mailcmd[] = { "terminal-wrapper", "-e", "smail", NULL };
-static const char *irccmd[] = { "terminal-wrapper", "-name", "xterm-irc", "-e", "irc", NULL };
-static const char *jabbercmd[] = { "terminal-wrapper", "-name", "xterm-jabber", "-e", "jabber", NULL };
-static const char *jabbersupportcmd[] = { "terminal-wrapper", "-name", "xterm-jabbersupport", "-e", "jabbersupport", NULL };
-static const char *playercmd[] = { "terminal-wrapper", "-e", "ncmpcpp", NULL };
-static const char *mixercmd[] = { "terminal-wrapper", "-e", "alsamixer", NULL };
-static const char *urlshowcmd[] = { "terminal-wrapper", "-name", "xterm-floating", "-e", "im-urlchoice", NULL };
-static const char *playclipcmd[] = { "play-clipboard-url", NULL };
-static const char *browseclipcmd[] = { "browser-clipboard", NULL };
-static const char *showcallscmd[] = { "terminal-wrapper", "-name", "xterm-floating", "-e", "show-calllog", NULL };
-static const char *scrotcmd[] = { "scrot", NULL };
-static const char *slockcmd[] = { "slock", NULL };
-
-static const char *audiomutecmd[] = { "control_volume", "toggle", NULL };
-static const char *audiolowercmd[] = { "control_volume", "down", NULL };
-static const char *audioraisecmd[] = { "control_volume", "up", NULL };
-static const char *audioplaycmd[] = { "mpc", "toggle", NULL };
-static const char *audioprevcmd[] = { "mpc", "prev", NULL };
-static const char *audionextcmd[] = { "mpc", "next", NULL };
-static const char *audiostopcmd[] = { "mpc", "stop", NULL };
-
-static const char *gmaup[] = { "gma-backlight", "up", NULL };
-static const char *gmadown[] = { "gma-backlight", "down", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
-	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY|Mod1Mask,              XK_Return, spawn,          {.v = termfscmd } },
-	{ MODKEY|ShiftMask,             XK_f,      spawn,          {.v = browsercmd } },
-	{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = mailcmd } },
-	{ MODKEY|ShiftMask,             XK_i,      spawn,          {.v = irccmd } },
-	{ MODKEY|ShiftMask,             XK_z,      spawn,          {.v = jabbercmd } },
-	{ MODKEY|ShiftMask,             XK_t,      spawn,          {.v = jabbersupportcmd } },
-	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = playercmd } },
-	{ MODKEY|ShiftMask,             XK_a,      spawn,          {.v = mixercmd } },
-	{ MODKEY|ShiftMask,             XK_u,      spawn,          {.v = urlshowcmd } },
-	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = playclipcmd } },
-	{ MODKEY|ShiftMask,             XK_c,      spawn,          {.v = browseclipcmd } },
-	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = showcallscmd } },
+	{ MODKEY,                       XK_Return, spawn,          SHCMD("xterm") },
+	{ MODKEY|Mod1Mask,              XK_Return, spawn,          SHCMD("xterm -name xterm-fullscreenwork") },
+	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("browser-wrapper") },
+	{ MODKEY|ShiftMask,             XK_o,      spawn,          SHCMD("terminal-wrapper -e smail") },
+	{ MODKEY|ShiftMask,             XK_i,      spawn,          SHCMD("terminal-wrapper -name xterm-irc -e irc") },
+	{ MODKEY|ShiftMask,             XK_z,      spawn,          SHCMD("terminal-wrapper -name xterm-jabber -e jabber") },
+	{ MODKEY|ShiftMask,             XK_t,      spawn,          SHCMD("terminal-wrapper -name xterm-jabbersupport -e jabbersupport") },
+	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("terminal-wrapper -e ncmpcpp") },
+	{ MODKEY|ShiftMask,             XK_a,      spawn,          SHCMD("terminal-wrapper -e alsamixer") },
+	{ MODKEY|ShiftMask,             XK_u,      spawn,          SHCMD("terminal-wrapper -name xterm-floating -e im-urlchoice") },
+	{ MODKEY|ShiftMask,             XK_x,      spawn,          SHCMD("play-clipboard-url") },
+	{ MODKEY|ShiftMask,             XK_c,      spawn,          SHCMD("browser-clipboard") },
+	{ MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("terminal-wrapper -name xterm-floating -e show-calllog") },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("vim-xterm \"$(xclip -o)\"") },
-	{ MODKEY,                       XK_Print,  spawn,          {.v = scrotcmd } },
-	{ MODKEY|ShiftMask|ControlMask, XK_l,      spawn,          {.v = slockcmd } },
+	{ MODKEY,                       XK_Print,  spawn,          SHCMD("scrot") },
+	{ MODKEY|ShiftMask|ControlMask, XK_l,      spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -148,31 +122,25 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ControlMask,           XK_r,      restart,        {0} },
 
-	{  0,  XF86XK_AudioMute,         spawn,  {  .v  =  audiomutecmd   }  },
-	{  0,  XF86XK_AudioLowerVolume,  spawn,  {  .v  =  audiolowercmd  }  },
-	{  0,  XF86XK_AudioRaiseVolume,  spawn,  {  .v  =  audioraisecmd  }  },
-	{  0,  XF86XK_AudioPlay,         spawn,  {  .v  =  audioplaycmd   }  },
-	{  0,  XF86XK_AudioPrev,         spawn,  {  .v  =  audioprevcmd   }  },
-	{  0,  XF86XK_AudioNext,         spawn,  {  .v  =  audionextcmd   }  },
-	{  0,  XF86XK_AudioStop,         spawn,  {  .v  =  audiostopcmd   }  },
-	{  0,  XF86XK_HomePage,          spawn,  {  .v  =  audioprevcmd   }  },
-	{  0,  XF86XK_Mail,              spawn,  {  .v  =  audionextcmd   }  },
-	{  0,  XF86XK_Sleep,             spawn,  {  .v  =  audiostopcmd   }  },
+	{ 0, XF86XK_AudioMute,        spawn, SHCMD("control_volume toggle") },
+	{ 0, XF86XK_AudioLowerVolume, spawn, SHCMD("control_volume down") },
+	{ 0, XF86XK_AudioRaiseVolume, spawn, SHCMD("control_volume up") },
+	{ 0, XF86XK_AudioPlay,        spawn, SHCMD("mpc toggle") },
+	{ 0, XF86XK_AudioPrev,        spawn, SHCMD("mpc prev") },
+	{ 0, XF86XK_AudioNext,        spawn, SHCMD("mpc next") },
+	{ 0, XF86XK_AudioStop,        spawn, SHCMD("mpc stop") },
+	{ 0, XF86XK_HomePage,         spawn, SHCMD("mpc prev") },
+	{ 0, XF86XK_Mail,             spawn, SHCMD("mpc next") },
+	{ 0, XF86XK_Sleep,            spawn, SHCMD("mpc stop") },
 
-	{  MODKEY,  XK_Up,    spawn,  {  .v  =  gmaup    }  },
-	{  MODKEY,  XK_Down,  spawn,  {  .v  =  gmadown  }  },
+	{ MODKEY, XK_Up,   spawn, SHCMD("gma-backlight up") },
+	{ MODKEY, XK_Down, spawn, SHCMD("gma-backlight down") },
 };
 
 /* button definitions */
 /* click can be ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
-	/*
-	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
-	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
-	*/
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
