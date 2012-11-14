@@ -108,6 +108,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          {.v = playclipcmd } },
 	{ MODKEY|ShiftMask,             XK_c,      spawn,          {.v = browseclipcmd } },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          {.v = showcallscmd } },
+	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("vim-xterm \"$(xclip -o)\"") },
 	{ MODKEY,                       XK_Print,  spawn,          {.v = scrotcmd } },
 	{ MODKEY|ShiftMask|ControlMask, XK_l,      spawn,          {.v = slockcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
