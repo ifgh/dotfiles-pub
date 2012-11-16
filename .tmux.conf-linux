@@ -1,4 +1,4 @@
 # vim: ft=tmux
 
-set -g status-right ' #(newmail "" " ")#[fg=red]%a, %Y-%m-%d, %T '
+set -g status-right ' #(newmail "" " ")#[fg=red]%a, %Y-%m-%d, %H:%M '
 set -g default-terminal 'screen.linux'
