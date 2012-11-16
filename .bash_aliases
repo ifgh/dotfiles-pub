@@ -4,6 +4,7 @@
 # sind.
 
 alias s='screen -R'
+alias tm='tmux'
 alias v='vim -p'
 alias g='git'
 alias gk='gitk'
