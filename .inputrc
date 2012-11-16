@@ -42,6 +42,10 @@ $endif
 # -------------------------------------------------------------------
 # Mein Zeugs
 
+# tmux
+"\eOC": forward-word
+"\eOD": backward-word
+
 $if mode=emacs
 	"\ej": menu-complete
 	"\ek": menu-complete-backward
