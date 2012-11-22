@@ -280,7 +280,7 @@ fun! X11CopySel()
 	silent '<,'>w !xclip -selection clipboard -f | xclip
 endfun
 
-fun! X11Paste()
+fun! X11PasteClipboard()
 	r !xclip -selection clipboard -o
 endfun
 
@@ -290,8 +290,8 @@ endfun
 
 nmap <Leader>xc :call X11Copy()<CR>
 vmap <Leader>xc :call X11CopySel()<CR>
-nmap <Leader>xp :call X11Paste()<CR>
-nmap <Leader>xP :call X11PastePrimary()<CR>
+nmap <Leader>xp :call X11PastePrimary()<CR>
+nmap <Leader>xP :call X11PasteClipboard()<CR>
 set pastetoggle=<F10>
 set mouse=
 
