@@ -58,28 +58,35 @@ XTerm*font4: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
 XTerm*font5: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
 XTerm*font6: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
 
-! CGA-Palette (bis auf color4)
+! Farben, based on Thayer:
+! http://cinderwick.ca/files/configs/Xdefaults
 XTerm*background:  #000000
 XTerm*foreground:  #aaaaaa
-XTerm*cursorColor: #00FF00
-
-XTerm*color0:      #000000
-XTerm*color1:      #AA0000
-XTerm*color2:      #00AA00
-XTerm*color3:      #AA5500
-XTerm*color4:      #3030AA
-XTerm*color5:      #AA00AA
-XTerm*color6:      #00AAAA
-XTerm*color7:      #AAAAAA
-
-XTerm*color8:      #555555
-XTerm*color9:      #FF5555
-XTerm*color10:     #55FF55
-XTerm*color11:     #FFFF55
-XTerm*color12:     #5555FF
-XTerm*color13:     #FF55FF
-XTerm*color14:     #55FFFF
-XTerm*color15:     #FFFFFF
+XTerm*cursorColor: #87FF00
+! Black
+XTerm*color0:      #0e0e0e
+XTerm*color8:      #555753
+! Red
+XTerm*color1:      #ff6565
+XTerm*color9:      #cf0000
+! Green
+XTerm*color2:      #93d44f
+XTerm*color10:     #00cf00
+! Yellow
+XTerm*color3:      #eab93d
+XTerm*color11:     #ffc123
+! Blue
+XTerm*color4:      #204a87
+XTerm*color12:     #3465a4
+! Mangenta
+XTerm*color5:      #ce5c00
+XTerm*color13:     #f57900
+! Cyan
+XTerm*color6:      #89b6e2
+XTerm*color14:     #46a4ff
+! White
+XTerm*color7:      #cccccc
+XTerm*color15:     #ffffff
 
 ! Bold wie am Linux VT: Grundsätzlich gibt es keine fetten Zeichen (die
 ! sehen mit dem VGA-Font furchtbar aus bzw. gehen mit kleinem Terminus

@@ -303,9 +303,7 @@ set mouse=
 hi clear
 set background=dark
 if (&t_Co == 256)
-	" DON'T CHANGE THIS.
-	" Du wirst sowieso hierhin zurückkehren.
-	colorscheme inkpot2_orig_simplified
+	colorscheme vairomouse
 else
 	hi  ColorColumn  ctermbg=4
 	hi  TabLineSel   ctermbg=4

@@ -71,7 +71,7 @@ if &t_Co > 255
   hi Type           term=NONE cterm=NONE ctermfg=170  ctermbg=NONE
   hi Underlined     term=NONE cterm=NONE ctermfg=188  ctermbg=NONE
   hi VertSplit      term=NONE cterm=NONE ctermfg=236  ctermbg=59
-  hi Visual         term=NONE cterm=NONE ctermfg=16   ctermbg=33
+  hi Visual         term=NONE cterm=NONE ctermfg=16   ctermbg=240
   hi VisualNOS      term=NONE cterm=NONE ctermfg=5    ctermbg=NONE
   hi WarningMsg     term=NONE cterm=NONE ctermfg=15   ctermbg=NONE
   hi WildMenu       term=NONE cterm=REVERSE ctermfg=194  ctermbg=NONE
