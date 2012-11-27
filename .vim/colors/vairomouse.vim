@@ -59,7 +59,7 @@ if &t_Co > 255
   hi StatusLine     term=NONE cterm=NONE ctermfg=6    ctermbg=234
   hi StatusLineNC   term=NONE cterm=NONE ctermfg=234  ctermbg=59
   hi StorageClass   term=NONE cterm=NONE ctermfg=249  ctermbg=NONE
-  hi String         term=NONE cterm=NONE ctermfg=7    ctermbg=0
+  hi String         term=NONE cterm=NONE ctermfg=231  ctermbg=235
   hi Structure      term=NONE cterm=NONE ctermfg=229  ctermbg=NONE
   hi TabLine        term=NONE cterm=NONE ctermfg=245  ctermbg=236
   hi TabLineFill    term=NONE cterm=NONE ctermfg=15   ctermbg=233
