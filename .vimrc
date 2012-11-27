@@ -113,6 +113,11 @@ nmap <silent> <C-l> :wincmd l<CR>
 " Suchergebnisse nicht mehr highlighten:
 map <F12> :noh<CR>
 
+" Control-Space führt zu ganz seltsamen Effekten und manchmal komme ich
+" ungewollt auf diese Kombination. Mach's aus. (@, weil Control-Space
+" ein Null-Byte einfügt.)
+inoremap <C-@> <Space>
+
 " Tabs und Umbrüche kontrollieren
 set tw=72
 set nolist
