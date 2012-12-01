@@ -69,7 +69,19 @@ macro index,pager,attach,compose \cp "\
 <enter-command> set my_pipe_decode=\$pipe_decode pipe_decode<Enter>\
 <pipe-message> podget<Enter>\
 <enter-command> set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<Enter>" \
+"podget"
+
+# sn2mail-post: Reply to a message.
+macro pager,attach,compose \cw "\
+<enter-command> set my_pipe_decode=\$pipe_decode pipe_decode<Enter>\
+<enter-command> set my_weed=\$weed weed=no<Enter>\
+<pipe-message> sn2mail-post /dev/stdin<Enter>\
+<enter-command> set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<Enter>\
+<enter-command> set weed=\$my_weed; unset my_weed<Enter>" \
 "call urlview to extract URLs out of a message"
+
+# sn2mail-post: New posting.
+macro index \cw "!sn2mail-post<Enter>"
 
 
 # -------------
