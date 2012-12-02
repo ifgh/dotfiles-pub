@@ -1,12 +1,17 @@
 " Vim color file
+" File:         termpot.vim
+" Maintainer:   Peter Hofmann
+" Version:      1.0
+" Last Change:  2012-12-02
+" Contributors: Anyone who contributed to the original "inkpot" scheme.
 
 set background=dark
 hi clear
 if exists("syntax_on")
-    syntax reset
+	syntax reset
 endif
 
-let colors_name = "termpot"
+let g:colors_name = "termpot"
 
 hi  Normal          cterm=NONE  ctermfg=229  ctermbg=232
 hi  IncSearch       cterm=BOLD  ctermfg=232  ctermbg=226
