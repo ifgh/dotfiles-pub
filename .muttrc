@@ -57,6 +57,8 @@ bind browser "R" check-new
 macro index "<esc>c" '!mailcommit<Enter>'
 macro browser "<esc>c" '!mailcommit<Enter>'
 
+macro index M "T~N<enter>;WNT~O<enter>;WO\CT~A<enter>" "Mark all messages read"
+
 # urlview
 macro index,pager,attach,compose \cb "\
 <enter-command> set my_pipe_decode=\$pipe_decode pipe_decode<Enter>\
