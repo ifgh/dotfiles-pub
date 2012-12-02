@@ -308,7 +308,7 @@ set mouse=
 hi clear
 set background=dark
 if (&t_Co == 256)
-	colorscheme vairomouse
+	colorscheme termpot
 else
 	hi  ColorColumn  ctermbg=4
 	hi  TabLineSel   ctermbg=4
