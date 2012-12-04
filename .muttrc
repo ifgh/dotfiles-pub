@@ -59,6 +59,13 @@ macro browser "<esc>c" '!mailcommit<Enter>'
 
 macro index M "T~N<enter>;WNT~O<enter>;WO\CT~A<enter>" "Mark all messages read"
 
+# View an attachment in the GUI browser
+macro attach \cv "\
+<enter-command> set my_pipe_decode=\$pipe_decode pipe_decode<Enter>\
+<pipe-message> mutt-view-attachment-gui<Enter>\
+<enter-command> set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<Enter>" \
+"Open attachment in GUI browser"
+
 # urlview
 macro index,pager,attach,compose \cb "\
 <enter-command> set my_pipe_decode=\$pipe_decode pipe_decode<Enter>\
