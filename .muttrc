@@ -74,7 +74,7 @@ macro index,pager,attach,compose \cp "\
 "podget"
 
 # sn2mail-post: Reply to a message.
-macro pager,attach,compose \cw "\
+macro pager \cw "\
 <enter-command> set my_pipe_decode=\$pipe_decode pipe_decode<Enter>\
 <enter-command> set my_weed=\$weed weed=no<Enter>\
 <pipe-message> sn2mail-post /dev/stdin<Enter>\
