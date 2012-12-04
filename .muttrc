@@ -80,10 +80,11 @@ macro pager,attach,compose \cw "\
 <pipe-message> sn2mail-post /dev/stdin<Enter>\
 <enter-command> set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<Enter>\
 <enter-command> set weed=\$my_weed; unset my_weed<Enter>" \
-"call urlview to extract URLs out of a message"
+"sn2mail: Reply to this notice"
 
 # sn2mail-post: New posting.
-macro index \cw "!sn2mail-post<Enter>"
+macro index \cw "!sn2mail-post<Enter>" \
+"sn2mail: Post new notice"
 
 
 # -------------
