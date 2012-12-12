@@ -79,7 +79,7 @@ export FG_ROOT=/usr/share/FlightGear/data
 export FG_SCENERY=$FG_ROOT/Scenery:$HOME/fgfs/Scenery
 
 # Lynx
-export LYNX_CFG=~/work/dotfiles/.lynx.cfg
+export LYNX_CFG=~/work/dotfiles-pub/.lynx.cfg
 
 # Für SoX seit 14.4.0 ...
 export AUDIODRIVER=alsa
