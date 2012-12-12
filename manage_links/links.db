@@ -8,6 +8,8 @@ work/dotfiles-pub/.htoprc	.htoprc
 work/dotfiles-pub/.inputrc	.inputrc
 work/dotfiles-pub/.less	.less
 work/dotfiles-pub/.lesskey	.lesskey
+work/dotfiles-pub/.lynxrc	.lynxrc
+work/dotfiles-pub/.lynx.cfg	.lynx.cfg
 work/dotfiles-pub/.mailcap	.mailcap
 work/dotfiles-pub/.muttrc	.muttrc
 work/dotfiles-pub/.mplayer	.mplayer
