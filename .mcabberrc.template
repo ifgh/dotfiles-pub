@@ -24,7 +24,7 @@ set password = &(password)
 # Set disable_random_resource to 1 if you don't want mcabber to add a random
 # suffix to the resource name.
 set resource = &(resource)
-#set disable_random_resource = 0
+set disable_random_resource = 1
 
 #set priority = 3
 #set priority_away = 0
