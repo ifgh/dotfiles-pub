@@ -33,6 +33,7 @@ static const Rule rules[] = {
 	{ "XTerm",          "xterm-floating",       NULL,       0,             True,        -1 },
 	{ "feh",            NULL,                   NULL,       0,             True,        -1 },
 	{ "Gitk",           NULL,                   NULL,       0,             True,        -1 },
+	{ "My-gitk",        NULL,                   NULL,       0,             True,        -1 },
 	{ "Hgk",            NULL,                   NULL,       0,             True,        -1 },
 	{ "Xpdf",           NULL,                   NULL,       0,             True,        -1 },
 	{ "Mirage",         NULL,                   NULL,       0,             True,        -1 },
