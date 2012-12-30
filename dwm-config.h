@@ -39,6 +39,7 @@ static const Rule rules[] = {
 	{ "Mirage",         NULL,                   NULL,       0,             True,        -1 },
 	{ "MPlayer",        NULL,                   NULL,       0,             True,        -1 },
 	{ "VirtualBox",     NULL,                   NULL,       0,             True,        -1 },
+	{ "Xdialog",        NULL,                   NULL,       0,             True,        -1 },
 };
 
 /* layout(s) */
