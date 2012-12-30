@@ -66,6 +66,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *dmenucmd[] = { "dmenu_hist", "-b", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char *getpwcmd[] = { "getpw", "-b", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, "-i", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -85,6 +86,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      spawn,          SHCMD("browser-clipboard") },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("xterm -name xterm-floating -e show-calllog") },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("vim-xterm \"$(xclip -o)\"") },
+	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = getpwcmd } },
 	{ MODKEY,                       XK_Print,  spawn,          SHCMD("scrot") },
 	{ MODKEY|ShiftMask|ControlMask, XK_l,      spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
