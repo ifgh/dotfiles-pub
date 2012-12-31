@@ -6,7 +6,7 @@ source ~/work/dotfiles/.mutt-personal
 
 # Wenn du auf Mails antwortest, dann schaue, ob der Empfänger in dieser
 # Mail einer deiner Alternates ist. Falls ja, dann benutze das als
-# Abswender für die Antwortmail.
+# Absender für die Antwortmail.
 set reverse_name=yes
 
 # Grundlegendes Maildir-Setup:
