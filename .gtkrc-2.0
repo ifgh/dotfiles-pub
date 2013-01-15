@@ -7,3 +7,12 @@ style "borderlessmenu" = "default"
 	GtkMenuBar::shadow-type = GTK_SHADOW_NONE
 }
 class "*GtkMenuBar*" style "borderlessmenu"
+
+style "borderlessscroll" = "default"
+{
+	GtkScrollbar::trough-border = 0
+	GtkScrollbar::min-slider-length = 40
+	bg[NORMAL] = "#626262"
+	bg[PRELIGHT] = "#505050"
+}
+class "*GtkScrollbar*" style "borderlessscroll"
