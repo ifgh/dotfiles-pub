@@ -39,6 +39,7 @@ alias alisys='mpop -a -C ~/work/dotfiles/.mpoprc-alice-system'
 alias gblobs='cd -- "$(gitary --printblobdir)"'
 alias dof='cd ~/work/dotfiles'
 alias dofp='cd ~/work/dotfiles-pub'
+alias dofs='cd ~/crypt/mount/tresor/dotfiles-secure'
 alias bin='cd ~/bin'
 alias binp='cd ~/bin-pub'
 
