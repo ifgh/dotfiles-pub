@@ -392,10 +392,10 @@ set printheader=%<%f%h%m
 
 
 " -------------
-" NERDTree Einstellungen
+" Calendar Einstellungen
 
-let NERDTreeShowHidden=1
-map <F3> :NERDTreeToggle<CR>
+let g:calendar_monday = 1
+map <F3> :Calendar<CR>
 
 
 " -------------
