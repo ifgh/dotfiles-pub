@@ -1,7 +1,4 @@
 term screen.linux
 
-# Wenn ich nicht in X bin, dann hätte ich die Benachrichtigung über neue
-# Mails gerne in der Screen-Statusbar.
-backtick 1 15 15 $HOME/bin/newmail " " " "
-caption always
+# Benutzt Backtick 1 für Mailausgabe.
 caption string '%{= Dk}%-w%{=b by}%n %t%{-}%+w %=%{= ck} %l %{=b by} %D, %Y-%m-%d, %0c %{=b rd}%1`'

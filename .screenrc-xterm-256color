@@ -1,1 +1,27 @@
 term screen-256color
+
+caption string '%{= Bk}%-w%{=b ky}%n %t%{-}%+w %=%{=b ky} %0c '
+#               └──┬──┘└┬┘└───┬──┘└─┬─┘└─┬┘└┬┘ │ └───┬──┘ └┬┘
+#                  │    │     │     │    │  │  │     │     │
+#                  │    │     │     │    │  │  │     │     └ Uhrzeit.
+#                  │    │     │     │    │  │  │     │
+#                  │    │     │     │    │  │  │     └ Farben wieder wie
+#                  │    │     │     │    │  │  │       bei fokussiertem
+#                  │    │     │     │    │  │  │       Fenster.
+#                  │    │     │     │    │  │  │
+#                  │    │     │     │    │  │  └ Nach rechts hin padden.
+#                  │    │     │     │    │  │
+#                  │    │     │     │    │  └ Restliche Fenster.
+#                  │    │     │     │    │
+#                  │    │     │     │    └ Gehe wieder zum vorherigen Set
+#                  │    │     │     │      an Farbattributen zurück.
+#                  │    │     │     │
+#                  │    │     │     └ Fensternummer und dann Titel des
+#                  │    │     │       aktuellen Fensters.
+#                  │    │     │
+#                  │    │     └ Bold als Attribut, black Hintergrund,
+#                  │    │       yellow Vordergrund.
+#                  │    │
+#                  │    └ Alle Fenster bis zum aktuellen (exklusiv).
+#                  │
+#                  └ Bright blue Hintergrund, black Vordergrund.

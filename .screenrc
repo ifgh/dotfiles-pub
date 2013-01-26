@@ -29,36 +29,15 @@ defscrollback 5000
 
 
 # -------------
-# Zeigt unten (bei Split) eine Leiste mit offenen Fenstern an und zwar
-# so, dass erst die Windowliste bis ausschließlich dem aktuellen Fenster
-# kommt, dann hervorgehoben dieses und abschließend der Rest der Liste.
+# Zeigt unten eine Leiste mit offenen Fenstern an und zwar so, dass erst
+# die Windowliste bis ausschließlich dem aktuellen Fenster kommt, dann
+# hervorgehoben dieses und abschließend der Rest der Liste. Welche
+# Farben genau verwendet werden, wird je nach Terminal entschieden.
+caption always
 
-caption splitonly
-caption string '%{= Bk}%-w%{=b ky}%n %t%{-}%+w %=%{=b ky} %0c '
-#               └──┬──┘└┬┘└───┬──┘└─┬─┘└─┬┘└┬┘ │ └───┬──┘ └┬┘
-#                  │    │     │     │    │  │  │     │     │
-#                  │    │     │     │    │  │  │     │     └ Uhrzeit.
-#                  │    │     │     │    │  │  │     │
-#                  │    │     │     │    │  │  │     └ Farben wieder wie
-#                  │    │     │     │    │  │  │       bei fokussiertem
-#                  │    │     │     │    │  │  │       Fenster.
-#                  │    │     │     │    │  │  │
-#                  │    │     │     │    │  │  └ Nach rechts hin padden.
-#                  │    │     │     │    │  │
-#                  │    │     │     │    │  └ Restliche Fenster.
-#                  │    │     │     │    │
-#                  │    │     │     │    └ Gehe wieder zum vorherigen Set
-#                  │    │     │     │      an Farbattributen zurück.
-#                  │    │     │     │
-#                  │    │     │     └ Fensternummer und dann Titel des
-#                  │    │     │       aktuellen Fensters.
-#                  │    │     │
-#                  │    │     └ Bold als Attribut, black Hintergrund,
-#                  │    │       yellow Vordergrund.
-#                  │    │
-#                  │    └ Alle Fenster bis zum aktuellen (exklusiv).
-#                  │
-#                  └ Bright blue Hintergrund, black Vordergrund.
+# Wenn ich nicht in X bin, dann hätte ich die Benachrichtigung über neue
+# Mails gerne in der Screen-Statusbar.
+backtick 1 15 15 $HOME/bin/newmail " " " "
 
 
 # -------------
