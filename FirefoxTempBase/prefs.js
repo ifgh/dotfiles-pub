@@ -22,6 +22,8 @@ user_pref("browser.places.smartBookmarksVersion", 4);
 user_pref("browser.rights.3.shown", true);
 user_pref("browser.safebrowsing.enabled", false);
 user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.search.update", false);
 user_pref("browser.startup.homepage", "file://__USER_HOME__/work/dotfiles/bookmarks.xhtml");
 user_pref("browser.startup.homepage_override.buildID", "20130119064747");
 user_pref("browser.startup.homepage_override.mstone", "ignore");
