@@ -72,9 +72,7 @@ tmptarget=/tmp/ff-temp-profile
 tmpbase=~/.mozilla/firefox/FirefoxTempBase
 if [[ ! -d "$tmptarget" ]] && [[ -d "$tmpbase" ]]
 then
-	: > "$tmpbase"/places.sqlite
-	: > "$tmpbase"/startupCache/startupCache.4.little
-	cp -RL "$tmpbase" "$tmptarget"
+	cp -aRL "$tmpbase" "$tmptarget"
 fi
 
 
