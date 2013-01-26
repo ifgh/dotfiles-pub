@@ -171,7 +171,7 @@ if g:dwm_map_keys
       nmap <C-N> <Plug>DWMNew
   endif
   if !hasmapto('<Plug>DWMClose')
-      nmap <C-C> <Plug>DWMClose
+      nmap <C-D> <Plug>DWMClose
   endif
   if !hasmapto('<Plug>DWMFocus')
       nmap <C-@> <Plug>DWMFocus
