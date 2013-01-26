@@ -104,12 +104,6 @@ map Q gq}
 nmap k gk
 nmap j gj
 
-" C-Direction zum Fensterwechsel.
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-j> :wincmd j<CR>
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-l> :wincmd l<CR>
-
 " Suchergebnisse nicht mehr highlighten:
 map <F12> :noh<CR>
 
