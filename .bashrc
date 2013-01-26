@@ -73,6 +73,7 @@ tmpbase=~/.mozilla/firefox/FirefoxTempBase
 if [[ ! -d "$tmptarget" ]] && [[ -d "$tmpbase" ]]
 then
 	cp -aRL "$tmpbase" "$tmptarget"
+	sed -i "s#__REPLACE_WITH_HOME__#$HOME#" "$tmptarget/prefs.js"
 fi
 
 
