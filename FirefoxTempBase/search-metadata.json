@@ -1,0 +1,18 @@
+{
+    "[app]/google.xml": {
+        "alias": "g",
+        "order": 1
+    },
+    "[app]/wikipedia.xml": {
+        "alias": "wi",
+        "order": 2
+    },
+    "[profile]/wikipedia-de.xml": {
+        "alias": "wide",
+        "order": 3
+    },
+    "[profile]/confl.xml": {
+        "alias": "c",
+        "order": 4
+    }
+}
