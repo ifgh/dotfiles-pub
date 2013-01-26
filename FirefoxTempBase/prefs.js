@@ -27,6 +27,7 @@ user_pref("browser.search.update", false);
 user_pref("browser.startup.homepage", "file://__USER_HOME__/work/dotfiles/bookmarks.xhtml");
 user_pref("browser.startup.homepage_override.buildID", "20130119064747");
 user_pref("browser.startup.homepage_override.mstone", "ignore");
+user_pref("browser.tabs.closeWindowWithLastTab", false);
 user_pref("browser.tabs.warnOnClose", false);
 user_pref("browser.urlbar.trimURLs", false);
 user_pref("dom.mozApps.used", true);
