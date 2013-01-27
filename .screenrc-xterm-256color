@@ -1,9 +1,9 @@
 term screen-256color
 
-caption string '%{= Bk}%-w%{=b ky}%n %t%{-}%+w %=%{=b ky} %0c '
-#               └──┬──┘└┬┘└───┬──┘└─┬─┘└─┬┘└┬┘ │ └───┬──┘ └┬┘
-#                  │    │     │     │    │  │  │     │     │
-#                  │    │     │     │    │  │  │     │     └ Uhrzeit.
+caption string '%{= Bk}%-w%{=b ky}%n %t%{-}%+w %=%{=b ky}'
+#               └──┬──┘└┬┘└───┬──┘└─┬─┘└─┬┘└┬┘ │ └───┬──┘
+#                  │    │     │     │    │  │  │     │
+#                  │    │     │     │    │  │  │     │
 #                  │    │     │     │    │  │  │     │
 #                  │    │     │     │    │  │  │     └ Farben wieder wie
 #                  │    │     │     │    │  │  │       bei fokussiertem
