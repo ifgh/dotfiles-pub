@@ -39,6 +39,9 @@ caption always
 # Mails gerne in der Screen-Statusbar.
 backtick 1 15 15 $HOME/bin/newmail " " " "
 
+# Sei aufdringlicher bei Bells im Hintergrund.
+bell_msg "Bell in window %n^G"
+
 
 # -------------
 # Keybinds:
