@@ -14,7 +14,8 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = False;    /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = { "w", "c", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = {  "1",  "2",  "3",  "4",  "5",  "6",  "7",  "8",  "9",
+                              "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -104,7 +105,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Escape, view,           {0} },
 	{ MODKEY,                       XK_Tab,    swapfocus,      {0} },
-	{ MODKEY,                       XK_F1,     killclient,     {0} },
+	{ MODKEY|ControlMask,           XK_Escape, killclient,     {0} },
 	{ MODKEY,                       XK_q,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_w,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_p,      setlayout,      {.v = &layouts[2]} },
@@ -126,6 +127,15 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(                        XK_F1,                     9)
+	TAGKEYS(                        XK_F2,                    10)
+	TAGKEYS(                        XK_F3,                    11)
+	TAGKEYS(                        XK_F4,                    12)
+	TAGKEYS(                        XK_F5,                    13)
+	TAGKEYS(                        XK_F6,                    14)
+	TAGKEYS(                        XK_F7,                    15)
+	TAGKEYS(                        XK_F8,                    16)
+	TAGKEYS(                        XK_F9,                    17)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ControlMask,           XK_r,      restart,        {0} },
 
