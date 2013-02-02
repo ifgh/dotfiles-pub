@@ -14,8 +14,9 @@ static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = False;    /* False means bottom bar */
 
 /* tagging */
-static const char *tags[] = {  "1",  "2",  "3",  "4",  "5",  "6",  "7",  "8",  "9",
-                              "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9" };
+static const char *tags[] = {   "1",   "2",   "3",  "4",  "5",  "6",  "7",  "8",  "9",  "0",
+                               "F1",  "F2",  "F3", "F4", "F5", "F6", "F7", "F8", "F9",
+                              "F10", "F11", "F12" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -131,15 +132,19 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-	TAGKEYS(                        XK_F1,                     9)
-	TAGKEYS(                        XK_F2,                    10)
-	TAGKEYS(                        XK_F3,                    11)
-	TAGKEYS(                        XK_F4,                    12)
-	TAGKEYS(                        XK_F5,                    13)
-	TAGKEYS(                        XK_F6,                    14)
-	TAGKEYS(                        XK_F7,                    15)
-	TAGKEYS(                        XK_F8,                    16)
-	TAGKEYS(                        XK_F9,                    17)
+	TAGKEYS(                        XK_0,                      9)
+	TAGKEYS(                        XK_F1,                    10)
+	TAGKEYS(                        XK_F2,                    11)
+	TAGKEYS(                        XK_F3,                    12)
+	TAGKEYS(                        XK_F4,                    13)
+	TAGKEYS(                        XK_F5,                    14)
+	TAGKEYS(                        XK_F6,                    15)
+	TAGKEYS(                        XK_F7,                    16)
+	TAGKEYS(                        XK_F8,                    17)
+	TAGKEYS(                        XK_F9,                    18)
+	TAGKEYS(                        XK_F10,                   19)
+	TAGKEYS(                        XK_F11,                   20)
+	TAGKEYS(                        XK_F12,                   21)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 	{ MODKEY|ControlMask,           XK_r,      restart,        {0} },
 
