@@ -106,7 +106,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Escape, view,           {0} },
 	{ MODKEY,                       XK_Tab,    swapfocus,      {0} },
-	{ MODKEY|ControlMask,           XK_Escape, killclient,     {0} },
+	{ MODKEY|Mod1Mask,              XK_Escape, killclient,     {0} },
 	{ MODKEY,                       XK_q,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_w,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_p,      setlayout,      {.v = &layouts[2]} },
