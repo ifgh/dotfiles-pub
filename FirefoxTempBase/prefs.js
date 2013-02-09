@@ -15,6 +15,7 @@ user_pref("browser.cache.disk.smart_size.first_run", false);
 user_pref("browser.cache.disk.smart_size.use_old_max", false);
 user_pref("browser.cache.disk.smart_size_cached_value", 358400);
 user_pref("browser.download.useDownloadDir", false);
+user_pref("browser.formfill.enable", false);
 user_pref("browser.migration.version", 8);
 user_pref("browser.newtab.url", "about:blank");
 user_pref("browser.pagethumbnails.storage_version", 2);
