@@ -37,7 +37,7 @@ caption always
 
 # Wenn ich nicht in X bin, dann hätte ich die Benachrichtigung über neue
 # Mails gerne in der Screen-Statusbar.
-backtick 1 15 15 $HOME/bin/newmail " " " "
+backtick 1 15 15 $HOME/bin-pub/newmail " " " "
 
 # Sei aufdringlicher bei Bells im Hintergrund.
 bell_msg "Bell in window %n^G"
