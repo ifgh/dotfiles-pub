@@ -52,7 +52,7 @@ shopt -s histreedit            # Neuer Versuch bei falschen "!"-Geschichten.
 record_samson
 
 # Diese Verzeichnisse will ich eh immer haben:
-mkdir -p /tmp/{download,youtube,tmp}
+mkdir -p /tmp/{download,tmp}
 
 # Paste initialisieren.
 stouch
