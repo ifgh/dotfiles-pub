@@ -118,11 +118,7 @@ set nolist
 set number
 set ai tabstop=4 sw=4
 set linebreak
-if (&term =~ '^xterm' || &term =~ '^rxvt')
-	set listchars=tab:│·,eol:$,precedes:<,extends:>,trail:#,nbsp:%
-else
-	set listchars=tab:\|-,eol:$,precedes:<,extends:>,trail:#,nbsp:%
-endif
+set listchars=tab:\|-,eol:$,precedes:<,extends:>,trail:#,nbsp:%
 set sidescroll=1
 map <F11> :set list!<CR>
 map <Leader>w :set wrap!<CR>
