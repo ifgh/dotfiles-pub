@@ -4,7 +4,6 @@ work/dotfiles-pub/.bash_logout	.bash_logout
 work/dotfiles-pub/.exrc	.exrc
 work/dotfiles-pub/.gdbinit	.gdbinit
 work/dotfiles-pub/.gtkrc-2.0	.gtkrc-2.0
-work/dotfiles-pub/.htoprc	.htoprc
 work/dotfiles-pub/.hushlogin	.hushlogin
 work/dotfiles-pub/.hushmotd	.hushmotd
 work/dotfiles-pub/.inputrc	.inputrc
@@ -28,3 +27,4 @@ work/dotfiles-pub/.Xresources	.Xresources
 ../../work/dotfiles-pub/.fonts.conf	.config/fontconfig/fonts.conf
 ../../work/dotfiles-pub/.gtk3-settings.ini	.config/gtk-3.0/settings.ini
 ../../work/dotfiles-pub/FirefoxTempBase	.mozilla/firefox/FirefoxTempBase
+../../work/dotfiles-pub/.htoprc	.config/htop/htoprc
