@@ -1,0 +1,9 @@
+highlight FontFixed font-family: Terminus !important;
+set guioptions+=T
+set complete-=search
+set hintkeys=asdfjklö
+set editor='vim-xterm <file>'
+map ö gT
+map ä gt
+map Ö :tabm<Space>-1<Return>
+map Ä :tabm<Space>+1<Return>
