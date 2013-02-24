@@ -89,9 +89,9 @@ fun! AddAllColorColumns(begin, max)
 	exec 'set colorcolumn=' . l:str
 endfun
 
-" Die 73 will ich immer als Begrenzer sehen und dann alles über 80
-" Zeichen.
-set colorcolumn=73
+" Die 73 will ich immer als Begrenzer sehen, aktuelle Textwidth auch und
+" dann alles über 80 Zeichen.
+set colorcolumn=73,+1
 call AddAllColorColumns(81, 300)
 
 " Vervollständigung mit schönem Menü.
