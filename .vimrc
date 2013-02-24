@@ -369,7 +369,7 @@ set statusline=%f\ %y\ \ %h%m%r
 			\\ \ %#Error#%{&fenc==''?'':&fenc=='utf-8'?'':'\ '.&fenc.'\ '}%*
 			\\ \ %#Error#%{&bomb?'\ BOM\ ':''}%*
 			\\ \ %#Error#%{&paste?'\ PASTE\ ':''}%*
-			\%=\ [%4b,%4B]\ [%3v/%3{&tw}]\ [%5l/%5L]
+			\%=\ [C:%4b,%4B]\ [X:%3v/%3{&tw}]\ [Y:%5l/%5L]
 
 
 " -------------
