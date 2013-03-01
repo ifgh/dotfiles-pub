@@ -12,6 +12,7 @@ style "borderlessscroll" = "default"
 {
 	GtkScrollbar::trough-border = 0
 	GtkScrollbar::min-slider-length = 40
+	GtkScrollbar::slider-width = 25
 	bg[NORMAL] = "#626262"
 	bg[PRELIGHT] = "#505050"
 }
