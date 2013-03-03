@@ -136,7 +136,7 @@ xterm-jabbersupport*color0: #001122
 ! Fullscreen-XTerm
 
 xterm-fullscreenwork*internalBorder: 0
-xterm-fullscreenwork*font: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
+xterm-fullscreenwork*font: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
 
 
 ! ---------------------------------------------------------------------
