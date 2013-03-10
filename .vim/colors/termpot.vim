@@ -36,7 +36,7 @@ hi  FoldColumn      cterm=NONE  ctermfg=61   ctermbg=232
 
 hi  Directory       cterm=NONE  ctermfg=47   ctermbg=NONE
 hi  LineNr          cterm=BOLD  ctermfg=237  ctermbg=233
-hi  NonText         cterm=NONE  ctermfg=52   ctermbg=NONE
+hi  NonText         cterm=NONE  ctermfg=52   ctermbg=16
 hi  SpecialKey      cterm=NONE  ctermfg=52   ctermbg=NONE
 hi  Title           cterm=BOLD  ctermfg=130  ctermbg=232
 hi  Visual          cterm=NONE  ctermfg=232  ctermbg=215
