@@ -23,7 +23,7 @@ hi  MoreMsg         cterm=BOLD  ctermfg=63
 hi  Question        cterm=BOLD  ctermfg=214
 hi  StatusLine      cterm=BOLD  ctermfg=244  ctermbg=235
 hi  StatusLineNC    cterm=NONE  ctermfg=244  ctermbg=235
-hi  VertSplit       cterm=NONE  ctermfg=244  ctermbg=238
+hi  VertSplit       cterm=NONE  ctermfg=235  ctermbg=235
 hi  WildMenu        cterm=BOLD  ctermfg=214  ctermbg=232
 
 hi  DiffText        cterm=NONE  ctermfg=229  ctermbg=34
