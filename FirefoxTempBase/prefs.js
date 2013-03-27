@@ -57,6 +57,7 @@ user_pref("layout.spellcheckDefault", 0);
 user_pref("network.cookie.prefsMigrated", true);
 user_pref("network.dnsCacheExpiration", 0);
 user_pref("places.history.expiration.transient_current_max_pages", 13264);
+user_pref("pdfjs.disabled", true);
 user_pref("privacy.cpd.offlineApps", true);
 user_pref("privacy.donottrackheader.enabled", true);
 user_pref("privacy.sanitize.migrateFx3Prefs", true);
