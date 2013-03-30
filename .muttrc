@@ -112,6 +112,7 @@ unignore from
 unignore to
 unignore cc
 unignore subject
+unignore date
 
 color attachment black green
 
