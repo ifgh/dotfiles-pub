@@ -80,6 +80,7 @@ fi
 
 # -------------
 # Auf tty2 ins X starten.
+
 if [[ $(tty) == "/dev/tty2" ]]
 then
 	mv -f ~/.xsession.log{,.old}
