@@ -395,13 +395,6 @@ set printheader=%<%f%h%m
 
 
 " -------------
-" Calendar Einstellungen
-
-let g:calendar_monday = 1
-map <F3> :Calendar<CR>
-
-
-" -------------
 " Shortcuts für verschiedene Dateitypen
 
 command! FtypeNothing :set ft=
