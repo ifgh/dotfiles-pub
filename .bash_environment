@@ -55,7 +55,7 @@ export VISUAL="vim"
 export PAGER="less"
 export SUDO_PROMPT='[sudo] Password (%p): '
 export MANWIDTH=72
-export BROWSER="luakit-wrapper"
+export BROWSER="dwb"
 export BLOCK_SIZE=\'1
 
 # Less-Optionen:
