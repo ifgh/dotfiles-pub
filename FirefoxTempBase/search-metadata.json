@@ -1,6 +1,6 @@
 {
     "[app]/google.xml": {
-        "alias": "g",
+        "alias": "goo",
         "order": 1
     },
     "[app]/wikipedia.xml": {
@@ -14,5 +14,9 @@
     "[profile]/confl.xml": {
         "alias": "c",
         "order": 4
+    },
+    "[profile]/startpage-https.xml": {
+        "alias": "g",
+        "order": 5
     }
 }
