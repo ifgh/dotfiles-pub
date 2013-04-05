@@ -69,6 +69,8 @@ then
 	sed -i "s#__USER_HOME__#$HOME#" "$tmptarget/prefs.js"
 	find "$tmptarget" -type f -exec \
 		sed -i "s#__EMPLOYER_DOMAIN__#$(< ~/.employer_domain)#" '{}' ';'
+
+	[[ -r ~/work/dotfiles/.firefox-local ]] && .  ~/work/dotfiles/.firefox-local
 fi
 
 
