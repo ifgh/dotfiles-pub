@@ -50,12 +50,12 @@ eval $(dircolors ~/work/dotfiles-pub/.dircolors)
 # Sonstiges Environment.
 
 export PATH=$PATH:$HOME/bin
-export EDITOR="vim"
-export VISUAL="vim"
-export PAGER="less"
+export EDITOR=vim
+export VISUAL=vim
+export PAGER=less
 export SUDO_PROMPT='[sudo] Password (%p): '
 export MANWIDTH=72
-export BROWSER="firefox"
+export BROWSER=firefox
 export BLOCK_SIZE=\'1
 
 # Less-Optionen:
@@ -63,14 +63,14 @@ export BLOCK_SIZE=\'1
 # -S: Lange Zeilen abschneiden, scrollen nach rechts raus.
 # -X: Keine Termcap-(De)Initialisierung. Löscht den Screen nicht.
 # -# n: Seitwärts scrollen bei überlangen Zeilen in diesen Schritten.
-export LESS="-iRSX -# 2"
-export LESSHISTFILE="/dev/null"
+export LESS='-iRSX -# 2'
+export LESSHISTFILE=/dev/null
 
 # OpenJDK und die Non-Reparenting Window Managers:
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Font-AA für OpenJDK:
-export _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd"
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
 
 # Mein MPD ist über Unix-Sockets erreichbar. Und zwar:
 export MPD_HOST=~/.mpd/socket
@@ -94,7 +94,7 @@ case $TERM in
 		setterm -blank 30
 		;;
 	vt100)
-		export EDITOR="ed"
-		export VISUAL="vi"
+		export EDITOR=ed
+		export VISUAL=vi
 		;;
 esac
