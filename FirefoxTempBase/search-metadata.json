@@ -18,5 +18,9 @@
     "[profile]/startpage-https.xml": {
         "alias": "g",
         "order": 5
+    },
+    "[profile]/youtube.xml": {
+		"alias": "yt",
+        "order": 6
     }
 }
