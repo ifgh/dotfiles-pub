@@ -59,12 +59,6 @@ stouch
 
 
 # -------------
-# Eventuell lokal Dinge überschreiben
-
-[[ -r ~/work/dotfiles/.bashrc-local ]] && .  ~/work/dotfiles/.bashrc-local
-
-
-# -------------
 # Firefox: Temporäres Profil
 
 tmptarget=/tmp/ff-temp-profile
@@ -76,6 +70,12 @@ then
 	find "$tmptarget" -type f -exec \
 		sed -i "s#__EMPLOYER_DOMAIN__#$(< ~/.employer_domain)#" '{}' ';'
 fi
+
+
+# -------------
+# Eventuell lokal Dinge überschreiben
+
+[[ -r ~/work/dotfiles/.bashrc-local ]] && .  ~/work/dotfiles/.bashrc-local
 
 
 # -------------
