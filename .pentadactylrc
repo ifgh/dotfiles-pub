@@ -1,5 +1,4 @@
 highlight FontFixed font-family: Terminus !important;
-set guioptions+=T
 set complete-=search
 set hintkeys=asdfjklö
 set editor='vim-xterm <file>'
