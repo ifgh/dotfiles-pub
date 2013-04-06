@@ -85,7 +85,9 @@ fi
 
 if [[ $(tty) == "/dev/tty2" ]]
 then
-	mv -f ~/.xsession.log{,.old}
+	mv -f ~/.xsession.log.{2,3}
+	mv -f ~/.xsession.log.{1,2}
+	mv -f ~/.xsession.log{,.1}
 	exec 1>~/.xsession.log
 	exec 2>&1
 	exec 0<&-
