@@ -17,6 +17,7 @@ work/dotfiles-pub/.mplayer	.mplayer
 /tmp/ff-temp-profile/pentadactyl-home	.pentadactyl
 work/dotfiles-pub/.pentadactylrc	.pentadactylrc
 work/dotfiles-pub/.urlview	.urlview
+work/dotfiles-pub/.uim.d	.uim.d
 work/dotfiles-pub/.vim	.vim
 work/dotfiles-pub/.vimrc	.vimrc
 work/dotfiles-pub/.gvimrc	.gvimrc
