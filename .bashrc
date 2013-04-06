@@ -70,14 +70,14 @@ then
 	find "$tmptarget" -type f -exec \
 		sed -i "s#__EMPLOYER_DOMAIN__#$(< ~/.employer_domain)#" '{}' ';'
 
-	[[ -r ~/work/dotfiles/.firefox-local ]] && .  ~/work/dotfiles/.firefox-local
+	[[ -r ~/work/dotfiles/.firefox-local ]] && . ~/work/dotfiles/.firefox-local
 fi
 
 
 # -------------
 # Eventuell lokal Dinge überschreiben
 
-[[ -r ~/work/dotfiles/.bashrc-local ]] && .  ~/work/dotfiles/.bashrc-local
+[[ -r ~/work/dotfiles/.bashrc-local ]] && . ~/work/dotfiles/.bashrc-local
 
 
 # -------------
