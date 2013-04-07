@@ -25,6 +25,7 @@ work/dotfiles-pub/.screenrc	.screenrc
 work/dotfiles-pub/.tmux.conf	.tmux.conf
 work/dotfiles-pub/.xpdfrc	.xpdfrc
 work/dotfiles-pub/.Xresources	.Xresources
+../work/dotfiles-pub/.mpd.conf	.mpd/mpd.conf
 ../../work/dotfiles-pub/.fonts.conf	.config/fontconfig/fonts.conf
 ../../work/dotfiles-pub/.gtk3-settings.ini	.config/gtk-3.0/settings.ini
 ../../work/dotfiles-pub/FirefoxTempBase	.mozilla/firefox/FirefoxTempBase
