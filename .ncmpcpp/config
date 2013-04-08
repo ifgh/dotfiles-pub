@@ -1,0 +1,21 @@
+# Upstream: /usr/share/doc/ncmpcpp/config
+
+mpd_music_dir = "~/music"
+
+user_interface = "alternative"
+mouse_support = "no"
+playlist_separate_albums = "yes"
+empty_tag_marker = ""
+
+playlist_disable_highlight_delay = "0"
+song_columns_list_format = "(10)[green]{l} (4)[yellow]{n:#} (20)[cyan]{a} (20)[red]{b} (80)[yellow]{t|f:Title}"
+playlist_display_mode = "columns"
+autocenter_mode = "yes"
+default_space_mode = "select"
+display_bitrate = "yes"
+
+allow_physical_files_deletion = "yes"
+
+visualizer_fifo_path = "/home/void/.mpd/ncmpcpp_vis.fifo"
+visualizer_output_name = "ncmpcpp_vis"
+visualizer_type = "wave"
