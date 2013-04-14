@@ -16,6 +16,7 @@ user_pref("browser.cache.disk.smart_size.use_old_max", false);
 user_pref("browser.cache.disk.smart_size_cached_value", 358400);
 user_pref("browser.download.dir", "/tmp/download");
 user_pref("browser.download.folderList", 2);
+user_pref("browser.download.manager.showAlertOnComplete", false);
 user_pref("browser.formfill.enable", false);
 user_pref("browser.fullscreen.animateUp", 0);
 user_pref("browser.migration.version", 8);
