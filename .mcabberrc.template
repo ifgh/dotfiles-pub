@@ -238,7 +238,7 @@ set eventcmd_use_nickname = 0
 # You can request mcabber to inspect exit status value after each
 # events_command.  If this option is set, mcabber will beep if the
 # exit value is 2.
-#set eventcmd_checkstatus = 0
+set eventcmd_checkstatus = 1
 
 # Internal hooks
 # You can ask mcabber to execute an internal command when a special event
