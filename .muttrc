@@ -59,6 +59,11 @@ macro browser "<esc>c" '!mailcommit<Enter>'
 
 macro index M "T~N<enter>;WNT~O<enter>;WO\CT~A<enter>" "Mark all messages read"
 
+# Search in mails using mu
+macro index <F8> "<shell-escape>mu find --clearlinks --include-related \
+	--format=links --linksdir=/tmp/mu-results " "mu-find"
+macro index <F9> "<change-folder-readonly>/tmp/mu-results\n" "display mu-find results"
+
 # View an attachment in the GUI browser
 macro attach \cv "\
 <enter-command> set my_pipe_decode=\$pipe_decode pipe_decode<Enter>\
