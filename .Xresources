@@ -121,9 +121,6 @@ XTerm*on3Clicks: regex [^ \n]+
 XTerm*on4Clicks: regex [^#$]+
 XTerm*on5Clicks: line
 
-! Zeige den Mauscursor immer an.
-XTerm*pointerMode: 0
-
 
 ! ---------------------------------------------------------------------
 ! "support" flavour of mcabberrc
