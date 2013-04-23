@@ -1,5 +1,6 @@
 highlight FontFixed font-family: Terminus !important;
 set complete-=search
+set autocomplete=
 set hintkeys=asdfjklö
 set editor='vim-xterm <file>'
 map ö gT
