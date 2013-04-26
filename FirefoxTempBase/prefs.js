@@ -56,6 +56,7 @@ user_pref("gecko.buildID", "20130206211324");
 user_pref("gecko.mstone", "18.0.2");
 user_pref("general.smoothScroll", false);
 user_pref("general.warnOnAboutConfig", false);
+user_pref("image.high_quality_downscaling.enabled", false);
 user_pref("intl.charset.default", "UTF-8");
 user_pref("intl.charsetmenu.browser.cache", "UTF-8");
 user_pref("layout.spellcheckDefault", 0);
