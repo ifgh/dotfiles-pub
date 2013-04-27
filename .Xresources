@@ -54,7 +54,7 @@ XTerm*omitTranslation: fullscreen
 ! daran gewöhnen.
 XTerm*font3: -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
 XTerm*font:  -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
-XTerm*font4: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+XTerm*font4: -*-vga-*-*-*-*-*-*-*-*-*-*-iso10646-*
 XTerm*font5: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
 XTerm*font6: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
 
