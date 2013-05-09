@@ -92,6 +92,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,      spawn,          SHCMD("browser-clipboard") },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("xterm -hold -name xterm-floating -e resolve-shortened-url") },
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("asciitraf-all") },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("xterm -e htop") },
 	{ Mod1Mask|ShiftMask,           XK_v,      spawn,          SHCMD("xterm -name xterm-floating -e show-calllog") },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("vim-xterm \"$(xclip -o)\"") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = getpwshowcmd } },
