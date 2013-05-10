@@ -125,8 +125,8 @@ XTerm*on5Clicks: line
 ! ---------------------------------------------------------------------
 ! "support" flavour of mcabberrc
 
-xterm-jabbersupport*background: #001122
-xterm-jabbersupport*color0: #001122
+xterm-jabbersupport*background: #001133
+xterm-jabbersupport*color0: #001133
 
 
 ! ---------------------------------------------------------------------
