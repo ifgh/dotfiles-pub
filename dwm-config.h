@@ -43,6 +43,7 @@ static const Rule rules[] = {
 	{ "MPlayer",        NULL,                   NULL,       0,             True,        -1 },
 	{ "VirtualBox",     NULL,                   NULL,       0,             True,        -1 },
 	{ "Xdialog",        NULL,                   NULL,       0,             True,        -1 },
+	{ "Wine",           NULL,                   NULL,       0,             True,        -1 },
 };
 
 /* layout(s) */
