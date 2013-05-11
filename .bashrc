@@ -75,6 +75,17 @@ fi
 
 
 # -------------
+# sxiv cache
+
+[[ ! -d "/tmp/$USER-sxiv-cache" ]] && mkdir "/tmp/$USER-sxiv-cache"
+if [[ ! -L ~/.sxiv/cache ]]
+then
+	mkdir -p ~/.sxiv
+	ln -s "/tmp/$USER-sxiv-cache" ~/.sxiv/cache
+fi
+
+
+# -------------
 # Eventuell lokal Dinge überschreiben
 
 [[ -r ~/work/dotfiles/.bashrc-local ]] && . ~/work/dotfiles/.bashrc-local
