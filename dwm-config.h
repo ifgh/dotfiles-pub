@@ -85,7 +85,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_i,      spawn,          SHCMD("xterm -name xterm-irc -e irc") },
 	{ MODKEY|ShiftMask,             XK_z,      spawn,          SHCMD("xterm -name xterm-jabber -e jabber") },
 	{ MODKEY|ShiftMask,             XK_r,      spawn,          SHCMD("xterm -name xterm-jabbersupport -e jabbersupport") },
-	{ MODKEY|ShiftMask,             XK_t,      spawn,          SHCMD("xterm -name xterm-campfire -e ttyfire") },
+	{ MODKEY|ShiftMask,             XK_t,      spawn,          SHCMD("xterm -name xterm-hipchat -e jabberhipchat") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("xterm -e ncmpcpp") },
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          SHCMD("xterm -e alsamixer") },
 	{ MODKEY|ShiftMask,             XK_u,      spawn,          SHCMD("xterm -name xterm-floating -e im-urlchoice") },

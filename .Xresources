@@ -130,6 +130,13 @@ xterm-jabbersupport*color0: #001133
 
 
 ! ---------------------------------------------------------------------
+! "hipchat" flavour of mcabberrc
+
+xterm-jabberhipchat*background: #001100
+xterm-jabberhipchat*color0: #001100
+
+
+! ---------------------------------------------------------------------
 ! Fullscreen-XTerm
 
 xterm-fullscreenwork*internalBorder: 0
