@@ -37,6 +37,7 @@ user_pref("browser.tabs.closeWindowWithLastTab", false);
 user_pref("browser.tabs.insertRelatedAfterCurrent", false);
 user_pref("browser.tabs.warnOnClose", false);
 user_pref("browser.urlbar.trimURLs", false);
+user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("dom.mozApps.used", true);
 user_pref("extensions.adblockplus.currentVersion", "2.2.4");
 user_pref("extensions.blocklist.pingCountVersion", -1);
