@@ -125,15 +125,15 @@ XTerm*on5Clicks: line
 ! ---------------------------------------------------------------------
 ! "support" flavour of mcabberrc
 
-xterm-tac-jabbersupport*background: #001133
-xterm-tac-jabbersupport*color0: #001133
+xterm-tac-jabber-support*background: #001133
+xterm-tac-jabber-support*color0: #001133
 
 
 ! ---------------------------------------------------------------------
 ! "hipchat" flavour of mcabberrc
 
-xterm-tac-jabberhipchat*background: #001100
-xterm-tac-jabberhipchat*color0: #001100
+xterm-tac-jabber-hipchat*background: #001100
+xterm-tac-jabber-hipchat*color0: #001100
 
 
 ! ---------------------------------------------------------------------
