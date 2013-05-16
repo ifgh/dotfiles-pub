@@ -29,7 +29,6 @@ static const Rule rules[] = {
 	{ "Firefox",        NULL,                   NULL,       1 << (1 - 1),  False,       -1 },
 	{ "XTerm",          "xterm-irc",            NULL,       1 << (2 - 1),  False,       -1 },
 	{ "XTerm",          "xterm-jabber",         NULL,       1 << (2 - 1),  False,       -1 },
-	{ "XTerm",          "xterm-jabbersupport",  NULL,       1 << (2 - 1),  False,       -1 },
 	{ "XTerm",          "xterm-campfire",       NULL,       1 << (2 - 1),  False,       -1 },
 	{ "qemu",           NULL,                   NULL,       0,             True,        -1 },
 	{ "Avidemux2_gtk",  NULL,                   NULL,       0,             True,        -1 },
