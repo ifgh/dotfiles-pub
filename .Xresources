@@ -128,8 +128,8 @@ XTerm*on5Clicks: line
 xterm-tac-jabber-support*background: #001133
 xterm-tac-jabber-support*color0: #001133
 
-xterm-tac-jabber-hipchat*background: #001100
-xterm-tac-jabber-hipchat*color0: #001100
+xterm-tac-jabber-hipchat*background: #001A00
+xterm-tac-jabber-hipchat*color0: #001A00
 
 
 ! ---------------------------------------------------------------------
