@@ -5,10 +5,15 @@ static const char font[]            = "-*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
 static const char normbordercolor[] = "#333333";
 static const char normbgcolor[]     = "#0D0D0D";
 static const char normfgcolor[]     = "#EFEFEF";
-static const char selbordercolor[]  = "#8CFF00";
+static const char selbordercolor[]  = "#8FB1E2";
 static const char selbgcolor[]      = "#383838";
 static const char selfgcolor[]      = "#8CFF00";
-static const unsigned int borderpx  = 2;        /* border pixel of windows */
+static const unsigned int borderpx  = 3;        /* border pixel of windows */
+#ifdef SRVR_SEDNA
+static const unsigned int gappx     = 0;        /* useless gap */
+#else
+static const unsigned int gappx     = 25;       /* useless gap */
+#endif
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = False;    /* False means bottom bar */
