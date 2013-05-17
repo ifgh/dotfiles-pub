@@ -260,9 +260,10 @@ set eventcmd_checkstatus = 1
 # When FIFO  is configured, you can turn it off and on in real time with
 # the 'fifo_ignore' option (default: 0).  When set to 1, the FIFO input is
 # still read but it is discarded.
-#set fifo_name = ~/.mcabber/mcabber.fifo
+set fifo_name = /tmp/mcabber-fifo-&(fifo_name)
 #set fifo_hide_commands = 0
 #set fifo_ignore = 0
+module load fifo
 
 # Traces logging
 # If you want advanced traces, please specify a file and a level here.
