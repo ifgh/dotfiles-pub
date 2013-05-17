@@ -102,7 +102,7 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_s,      spawn,          {.v = getpwpasscmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = getpwcmd } },
 	{ MODKEY,                       XK_Print,  spawn,          SHCMD("scrot") },
-	{ MODKEY|ShiftMask|ControlMask, XK_y,      spawn,          SHCMD("slock") },
+	{ MODKEY|ShiftMask|ControlMask, XK_y,      spawn,          SHCMD("jslock") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
