@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/sbin/ethtool -s %i wol g
+ExecStart=/usr/bin/ethtool -s %i wol g
 TimeoutSec=0
 
 [Install]
