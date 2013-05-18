@@ -10,7 +10,7 @@ static const char selbgcolor[]      = "#383838";
 static const char selfgcolor[]      = "#8CFF00";
 #ifdef SRVR_sedna
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 0;        /* useless gap */
+static const unsigned int gappx     = 10;       /* useless gap */
 #else
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int gappx     = 25;       /* useless gap */
