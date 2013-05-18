@@ -5,7 +5,7 @@ static const char font[]            = "-*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*
 static const char normbordercolor[] = "#333333";
 static const char normbgcolor[]     = "#0D0D0D";
 static const char normfgcolor[]     = "#EFEFEF";
-static const char selbordercolor[]  = "#8FB1E2";
+static const char selbordercolor[]  = "#8CFF00";
 static const char selbgcolor[]      = "#383838";
 static const char selfgcolor[]      = "#8CFF00";
 #ifdef SRVR_sedna
