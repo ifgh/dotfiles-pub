@@ -1,9 +1,9 @@
-image/jpeg; feh %s; test=test -n "$DISPLAY"
-image/png; feh %s; test=test -n "$DISPLAY"
-image/gif; feh %s; test=test -n "$DISPLAY"
-image/tiff; feh %s; test=test -n "$DISPLAY"
-image/x-xbitmap; feh %s; test=test -n "$DISPLAY"
-image/*; feh %s; test=test -n "$DISPLAY"
+image/jpeg; sxiv %s; test=test -n "$DISPLAY"
+image/png; sxiv %s; test=test -n "$DISPLAY"
+image/gif; sxiv %s; test=test -n "$DISPLAY"
+image/tiff; sxiv %s; test=test -n "$DISPLAY"
+image/x-xbitmap; sxiv %s; test=test -n "$DISPLAY"
+image/*; sxiv %s; test=test -n "$DISPLAY"
 
 audio/basic; mplayer %s; needsterminal
 audio/*; mplayer %s; needsterminal
