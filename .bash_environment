@@ -52,6 +52,8 @@ eval $(dircolors ~/work/dotfiles-pub/.dircolors)
 export PATH=$PATH:$HOME/bin
 export EDITOR=vim
 export VISUAL=vim
+export GITODO_EDITOR='vim -p'
+export GITODO_EDIT_SINGLE=true
 export PAGER=less
 export SUDO_PROMPT='[sudo] Password (%p): '
 export MANWIDTH=72
