@@ -121,6 +121,9 @@ XTerm*on3Clicks: regex [^ \n]+
 XTerm*on4Clicks: regex [^#$]+
 XTerm*on5Clicks: line
 
+xterm-lock*pointerColor: #000000
+xterm-lock*pointerColorBackground: #000000
+
 
 ! ---------------------------------------------------------------------
 ! Different flavours of mcabber
