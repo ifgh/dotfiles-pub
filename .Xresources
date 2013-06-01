@@ -123,6 +123,7 @@ XTerm*on5Clicks: line
 
 xterm-lock*pointerColor: #000000
 xterm-lock*pointerColorBackground: #000000
+xterm-lock*font: -*-vga-*-*-*-*-*-*-*-*-*-*-iso10646-*
 
 
 ! ---------------------------------------------------------------------
