@@ -57,7 +57,7 @@ export GITODO_EDIT_SINGLE=true
 export PAGER=less
 export SUDO_PROMPT='[sudo] Password (%p): '
 export MANWIDTH=72
-export BROWSER=dwb
+export BROWSER=firefox
 export BLOCK_SIZE=\'1
 
 # Less-Optionen:
