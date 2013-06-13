@@ -133,6 +133,16 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      shiftview,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_h,      tagrel,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_l,      tagrel,         {.i = +1 } },
+	{ Mod1Mask|ShiftMask,           XK_j,      spawn,          SHCMD("xdotool mousemove_relative -- 0 10") },
+	{ Mod1Mask|ShiftMask,           XK_k,      spawn,          SHCMD("xdotool mousemove_relative -- 0 -10") },
+	{ Mod1Mask|ShiftMask,           XK_h,      spawn,          SHCMD("xdotool mousemove_relative -- -10 0") },
+	{ Mod1Mask|ShiftMask,           XK_l,      spawn,          SHCMD("xdotool mousemove_relative -- 10 0") },
+	{ Mod1Mask|ShiftMask|ControlMask, XK_j,    spawn,          SHCMD("xdotool mousemove_relative -- 0 40") },
+	{ Mod1Mask|ShiftMask|ControlMask, XK_k,    spawn,          SHCMD("xdotool mousemove_relative -- 0 -40") },
+	{ Mod1Mask|ShiftMask|ControlMask, XK_h,    spawn,          SHCMD("xdotool mousemove_relative -- -40 0") },
+	{ Mod1Mask|ShiftMask|ControlMask, XK_l,    spawn,          SHCMD("xdotool mousemove_relative -- 40 0") },
+	{ Mod1Mask|ShiftMask,           XK_space,  spawn,          SHCMD("xdotool click --clearmodifiers 1") },
+	{ Mod1Mask|ShiftMask|ControlMask, XK_space, spawn,         SHCMD("xdotool click --clearmodifiers 2") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
