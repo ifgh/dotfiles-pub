@@ -145,6 +145,8 @@ static Key keys[] = {
 	{ Mod1Mask|ShiftMask|ControlMask, XK_space, spawn,         SHCMD("xdotool click --clearmodifiers 2") },
 	{ Mod1Mask|ShiftMask,           XK_i,      spawn,          SHCMD("xdotool click --clearmodifiers 5") },
 	{ Mod1Mask|ShiftMask,           XK_o,      spawn,          SHCMD("xdotool click --clearmodifiers 4") },
+	{ Mod1Mask|ShiftMask,           XK_u,      spawn,          SHCMD("xdotool click --clearmodifiers 8") },
+	{ Mod1Mask|ShiftMask,           XK_p,      spawn,          SHCMD("xdotool click --clearmodifiers 9") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
