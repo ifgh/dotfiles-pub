@@ -517,5 +517,9 @@ bind M107 = roster up
 bind 383 = clear
 bind 5 = clear
 
+# Word jumping with ctrl-cursor
+bind 541 = iline bword
+bind 556 = iline fword
+
 # Sample alias to join mcabber channel with "/jmc"
 #alias jmc = room join mcabber@conf.lilotux.net
