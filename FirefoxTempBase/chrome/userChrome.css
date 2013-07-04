@@ -28,9 +28,14 @@ menubar {
 	background: #f2f0eb !important;
 	border: none !important;
 	border-bottom: #c6c4bf 1px solid !important;
+	border-right: #c6c4bf 1px solid !important;
 	border-radius: 0 !important;
 }
 
 .tab-close-button {
 	display: none !important;
+}
+
+.tabbrowser-tabs {
+	border-left: #c6c4bf 1px solid !important;
 }
