@@ -141,13 +141,6 @@ xterm-tac-jabber-hipchat*color0: #202020
 
 
 ! ---------------------------------------------------------------------
-! Fullscreen-XTerm
-
-xterm-fullscreenwork*internalBorder: 0
-xterm-fullscreenwork*font: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
-
-
-! ---------------------------------------------------------------------
 ! Beamerfarben fuers XTerm
 
 xterm-beamer*font: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
@@ -172,19 +165,6 @@ xterm-retro*cursorOffTime: 750
 xterm-retro*saveLines: 0
 xterm-retro*internalBorder: 0
 xterm-retro*pointerMode: 2
-
-
-! ---------------------------------------------------------------------
-! White XTerm
-
-xterm-white*font: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
-xterm-white*termName: vt100
-xterm-white*cursorColor: #000001
-xterm-white*background: white
-xterm-white*foreground: black
-xterm-white*showBlinkAsBold: true
-xterm-white*colorMode: false
-xterm-white*pointerMode: 2
 
 
 ! ---------------------------------------------------------------------

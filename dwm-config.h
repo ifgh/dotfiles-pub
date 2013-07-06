@@ -83,7 +83,6 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_r,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          SHCMD("xterm") },
-	{ MODKEY|Mod1Mask,              XK_Return, spawn,          SHCMD("xterm -name xterm-fullscreenwork") },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("browser-wrapper") },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,          SHCMD("xterm -e smail") },
 	{ MODKEY|ShiftMask,             XK_i,      spawn,          SHCMD("xterm -name xterm-tac-irc -e irc") },
@@ -98,7 +97,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("xterm -hold -name xterm-floating -e resolve-shortened-url") },
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("asciitraf-all") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("xterm -e htop") },
-	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("vim-xterm \"$(xclip -o)\"") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = getpwshowcmd } },
 	{ MODKEY|ControlMask,           XK_s,      spawn,          {.v = getpwpasscmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = getpwcmd } },
@@ -120,7 +118,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_q,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_w,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_p,      setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_space,  setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_f,      togglefullscreen, {0}, },
 	{ MODKEY,                       XK_m,      maximizefloater, {0}, },
