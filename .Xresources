@@ -108,6 +108,8 @@ XTerm*termName: xterm-256color
 
 ! Keybindings:
 XTerm*VT100.Translations: #override \
+		Ctrl Shift<Key>c: copy-selection(CLIPBOARD) \n\
+		Ctrl Shift<Key>v: insert-selection(CLIPBOARD) \n\
 		Shift<Key>Prior: scroll-back(1,halfpage) \n\
 		Shift<Key>Next: scroll-forw(1,halfpage) \n\
 		Shift<Key>Up: scroll-back(1,line) \n\
