@@ -54,6 +54,7 @@ user_pref("extensions.ui.lastCategory", "addons://list/extension");
 user_pref("extensions.ui.locale.hidden", true);
 user_pref("gecko.buildID", "20130514193536");
 user_pref("gecko.mstone", "21.0");
+user_pref("general.autoScroll", true);
 user_pref("general.smoothScroll", false);
 user_pref("general.warnOnAboutConfig", false);
 user_pref("image.high_quality_downscaling.enabled", false);
