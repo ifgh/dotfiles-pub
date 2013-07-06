@@ -34,7 +34,7 @@ XTerm.vt100.geometry: 80x25
 
 ! Eh klar.
 XTerm*loginShell: true
-XTerm*saveLines: 10000
+XTerm*saveLines: 50000
 XTerm*internalBorder: 0
 
 ! Bell settings.
