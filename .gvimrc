@@ -5,7 +5,7 @@ if has("gui_gtk2")
 	set guioptions-=T
 	set guioptions-=r
 	set guioptions-=R
-	set guifont=Terminus\ 12
+	set guifont=Terminus\ 8
 else
 	set guifont=-xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
 endif
