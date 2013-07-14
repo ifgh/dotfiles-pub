@@ -39,7 +39,7 @@ set editor="vim -c 'set textwidth=72' -c 'set ft=mailgroff' +"
 # Keybinds:
 
 macro generic ,1 ':set sendmail="/usr/bin/msmtp"'
-macro generic ,2 ':set sendmail="/usr/bin/msmtp -a alice"'
+macro generic ,2 ':set sendmail="/usr/bin/msmtp -a ziyal"'
 
 bind pager "J" next-line
 bind pager "K" previous-line
