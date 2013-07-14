@@ -315,6 +315,7 @@ hi clear
 set background=dark
 if (&t_Co == 256)
 	colorscheme termpot
+	set cursorline
 else
 	hi  ColorColumn  ctermbg=4
 	hi  TabLineSel   ctermbg=4
