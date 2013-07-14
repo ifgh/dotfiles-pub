@@ -1,8 +1,8 @@
 " Vim color file
 " File:         termpot.vim
 " Maintainer:   Peter Hofmann
-" Version:      1.1
-" Last Change:  2013-03-10
+" Version:      1.2
+" Last Change:  2013-07-14
 " Contributors: Anyone who contributed to the original "inkpot" scheme.
 
 set background=dark
@@ -59,5 +59,8 @@ hi  Todo            cterm=BOLD  ctermfg=237  ctermbg=63
 hi  Type            cterm=NONE  ctermfg=207  ctermbg=NONE
 hi  Underlined      cterm=BOLD  ctermfg=229  ctermbg=NONE
 hi  TaglistTagName  cterm=BOLD  ctermfg=37   ctermbg=NONE
+
+hi  CursorLineNr    ctermfg=11  ctermbg=233
+hi  CursorLine      cterm=NONE
 
 hi  ColorColumn     ctermbg=233
