@@ -36,6 +36,7 @@ user_pref("browser.tabs.animate", false);
 user_pref("browser.tabs.closeWindowWithLastTab", false);
 user_pref("browser.tabs.insertRelatedAfterCurrent", false);
 user_pref("browser.tabs.warnOnClose", false);
+user_pref("browser.urlbar.formatting.enabled", false);
 user_pref("browser.urlbar.trimURLs", false);
 user_pref("datareporting.healthreport.uploadEnabled", false);
 user_pref("dom.mozApps.used", true);
