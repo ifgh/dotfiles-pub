@@ -47,7 +47,7 @@ user_pref("extensions.databaseSchema", 14);
 user_pref("extensions.enabledAddons", "overbiteff%40floodgap.com:3.0.1627,%7B972ce4c6-7e08-4474-a285-3208198ce6fd%7D:21.0");
 user_pref("extensions.installCache", "[{\"name\":\"app-global\",\"addons\":{\"overbiteff@floodgap.com\":{\"descriptor\":\"/usr/lib/firefox/browser/extensions/overbiteff@floodgap.com\",\"mtime\":1368638413000,\"rdfTime\":1358395060000},\"{972ce4c6-7e08-4474-a285-3208198ce6fd}\":{\"descriptor\":\"/usr/lib/firefox/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}\",\"mtime\":1368550838000,\"rdfTime\":1368550818000},\"{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}\":{\"descriptor\":\"/usr/lib/firefox/browser/extensions/{d10d0bf8-f5b5-c8b4-a8b2-2b9879e08c5d}\",\"mtime\":1368622476000,\"rdfTime\":1368622476000}}}]");
 user_pref("extensions.itsalltext.editor", "__USER_HOME__/bin/vim-firefoxitsalltext");
-user_pref("extensions.itsalltext.gumdrop_position", "upper-left");
+user_pref("extensions.itsalltext.gumdrop_position", "none");
 user_pref("extensions.itsalltext.hotkey", "0:1:0:0:101:0");
 user_pref("extensions.itsalltext.workingdir", "/tmp/ff-temp-profile/itsalltext");
 user_pref("extensions.lastAppVersion", "21.0");
