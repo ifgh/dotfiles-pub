@@ -29,28 +29,30 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class                 instance           title  tags mask      isfloating  monitor */
-	{ "Avidemux2_gtk",       NULL,              NULL,  0,             True,       -1 },
-	{ "Firefox",             NULL,              NULL,  1 << (1 - 1),  False,      -1 },
-	{ "Gitk",                NULL,              NULL,  0,             True,       -1 },
-	{ "Hgk",                 NULL,              NULL,  0,             True,       -1 },
-	{ "libreoffice-calc",    NULL,              NULL,  0,             True,       -1 },
-	{ "libreoffice-writer",  NULL,              NULL,  0,             True,       -1 },
-	{ "MPlayer",             NULL,              NULL,  0,             True,       -1 },
-	{ "qemu",                NULL,              NULL,  0,             True,       -1 },
-	{ "VirtualBox",          NULL,              NULL,  0,             True,       -1 },
-	{ "Wine",                NULL,              NULL,  0,             True,       -1 },
-	{ "Xdialog",             NULL,              NULL,  0,             True,       -1 },
-	{ "Xpdf",                NULL,              NULL,  0,             True,       -1 },
-	{ "XTerm",               "xterm-floating",  NULL,  0,             True,       -1 },
-	{ "XTerm",               "xterm-lock",      NULL,  0,             True,       -1 },
-	{ "XTerm",               "xterm-tac",       NULL,  1 << (2 - 1),  False,      -1 },
+	/* class                 instance           title  tags mask      isfloating  monitor  sizehints */
+	{ "Avidemux2_gtk",       NULL,              NULL,  0,             True,       -1,      False },
+	{ "Firefox",             NULL,              NULL,  1 << (1 - 1),  False,      -1,      False },
+	{ "Gitk",                NULL,              NULL,  0,             True,       -1,      False },
+	{ "Hgk",                 NULL,              NULL,  0,             True,       -1,      False },
+	{ "libreoffice-calc",    NULL,              NULL,  0,             True,       -1,      False },
+	{ "libreoffice-writer",  NULL,              NULL,  0,             True,       -1,      False },
+	{ "MPlayer",             NULL,              NULL,  0,             True,       -1,      True  },
+	{ "qemu",                NULL,              NULL,  0,             True,       -1,      False },
+	{ "VirtualBox",          NULL,              NULL,  0,             True,       -1,      False },
+	{ "Wine",                NULL,              NULL,  0,             True,       -1,      False },
+	{ "Xdialog",             NULL,              NULL,  0,             True,       -1,      False },
+	{ "Xpdf",                NULL,              NULL,  0,             True,       -1,      False },
+	{ "XTerm",               "xterm-floating",  NULL,  0,             True,       -1,      False },
+	{ "XTerm",               "xterm-lock",      NULL,  0,             True,       -1,      False },
+	{ "XTerm",               "xterm-tac",       NULL,  1 << (2 - 1),  False,      -1,      False },
 };
 
 /* layout(s) */
 static const float mfact      = 0.5;   /* factor of master area size [0.05..0.95] */
 static const int nmaster      = 1;     /* number of clients in master area */
-static const Bool resizehints = False; /* True means respect size hints in tiled resizals */
+static const Bool sizehints_default = False; /* True means respect size hints in
+                                                tiled resizals. Can be overriden
+                                                by a rule. */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
