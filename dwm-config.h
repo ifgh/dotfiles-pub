@@ -94,6 +94,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("xterm -hold -name xterm-floating -e resolve-shortened-url") },
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("asciitraf-all") },
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("xterm -e htop") },
+	{ MODKEY|ShiftMask,             XK_e,      spawn,          SHCMD("xterm -e vimclip") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          {.v = getpwshowcmd } },
 	{ MODKEY|ControlMask,           XK_s,      spawn,          {.v = getpwpasscmd } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = getpwcmd } },
