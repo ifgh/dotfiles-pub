@@ -30,7 +30,7 @@ Xcursor.size: 16
 ! ---------------------------------------------------------------------
 ! XTerm
 
-XTerm.vt100.geometry: 80x25
+XTerm.vt100.geometry: 80x24
 
 ! Eh klar.
 XTerm*loginShell: true
