@@ -20,7 +20,7 @@ user_pref("browser.download.manager.showAlertOnComplete", false);
 user_pref("browser.formfill.enable", false);
 user_pref("browser.fullscreen.animateUp", 0);
 user_pref("browser.migration.version", 8);
-user_pref("browser.newtab.url", "about:blank");
+user_pref("browser.newtab.url", "file://__USER_HOME__/work/dotfiles/bookmarks.xhtml");
 user_pref("browser.pagethumbnails.storage_version", 2);
 user_pref("browser.panorama.animate_zoom", false);
 user_pref("browser.places.smartBookmarksVersion", 4);
