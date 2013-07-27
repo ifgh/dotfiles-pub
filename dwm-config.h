@@ -17,7 +17,8 @@ static const unsigned int gappx     = 25;       /* useless gap */
 #endif
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
-static const Bool topbar            = False;    /* False means bottom bar */
+static const Bool topbar            = True;     /* False means bottom bar */
+static Bool barbarrier              = True;     /* Put barriers around the bar */
 
 /* tagging */
 static const char *tags[] = { "www", "tac",   "3",  "4",  "5",  "6",  "7",  "8",  "9",  "0",
@@ -73,10 +74,10 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static const char *dmenucmd[] = { "dmenu_hist", "-b", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
-static const char *getpwcmd[] = { "getpw", "-p", "Insert:", "-b", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, "-i", NULL };
-static const char *getpwshowcmd[] = { "getpw", "--show-account-details", "-p", "Show:", "-b", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, "-i", NULL };
-static const char *getpwpasscmd[] = { "getpw", "--type-only-password", "-p", "Insert (PW):", "-b", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, "-i", NULL };
+static const char *dmenucmd[] = { "dmenu_hist", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, NULL };
+static const char *getpwcmd[] = { "getpw", "-p", "Insert:", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, "-i", NULL };
+static const char *getpwshowcmd[] = { "getpw", "--show-account-details", "-p", "Show:", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, "-i", NULL };
+static const char *getpwpasscmd[] = { "getpw", "--type-only-password", "-p", "Insert (PW):", "-fn", font, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbgcolor, "-sf", selfgcolor, "-i", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
