@@ -29,6 +29,7 @@ work/dotfiles-pub/.Xresources	.Xresources
 ../work/dotfiles-pub/.mpd.conf	.mpd/mpd.conf
 ../work/dotfiles-pub/.ncmpcpp/config	.ncmpcpp/config
 ../../work/dotfiles-pub/.fonts.conf	.config/fontconfig/fonts.conf
+../../work/dotfiles-pub/.gtk3.css	.config/gtk-3.0/gtk.css
 ../../work/dotfiles-pub/.gtk3-settings.ini	.config/gtk-3.0/settings.ini
 ../../work/dotfiles-pub/FirefoxTempBase	.mozilla/firefox/FirefoxTempBase
 ../../work/dotfiles-pub/.htoprc	.config/htop/htoprc
