@@ -126,6 +126,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      shiftview,      {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_h,      tagrel,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_l,      tagrel,         {.i = +1 } },
+	{ MODKEY|ControlMask,           XK_a,      tag,            {.ui = ~0 } },
 	{ Mod1Mask|ShiftMask,           XK_j,      spawn,          SHCMD("xdotool mousemove_relative -- 0 10") },
 	{ Mod1Mask|ShiftMask,           XK_k,      spawn,          SHCMD("xdotool mousemove_relative -- 0 -10") },
 	{ Mod1Mask|ShiftMask,           XK_h,      spawn,          SHCMD("xdotool mousemove_relative -- -10 0") },
