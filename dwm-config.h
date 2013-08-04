@@ -34,6 +34,7 @@ static const Rule rules[] = {
 	{ "libreoffice-writer",  NULL,              NULL,  0,             True,       -1,      False },
 	{ "MPlayer",             NULL,              NULL,  0,             True,       -1,      True  },
 	{ "qemu",                NULL,              NULL,  0,             True,       -1,      False },
+	{ "Vncviewer",           NULL,              NULL,  0,             True,       -1,      False },
 	{ "VirtualBox",          NULL,              NULL,  0,             True,       -1,      False },
 	{ "Wine",                NULL,              NULL,  0,             True,       -1,      False },
 	{ "Xdialog",             NULL,              NULL,  0,             True,       -1,      False },
