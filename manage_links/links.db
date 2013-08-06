@@ -22,7 +22,6 @@ work/dotfiles-pub/.uim.d	.uim.d
 work/dotfiles-pub/.vim	.vim
 work/dotfiles-pub/.vimrc	.vimrc
 work/dotfiles-pub/.gvimrc	.gvimrc
-/home/void/work/shell/textios/vim/textios.vim	.vim/ftdetect/textios.vim
 work/dotfiles-pub/.screenrc	.screenrc
 work/dotfiles-pub/.tmux.conf	.tmux.conf
 work/dotfiles-pub/.xpdfrc	.xpdfrc
