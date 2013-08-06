@@ -1,0 +1,1 @@
+/home/void/work/shell/textios/vim/textios.vim
