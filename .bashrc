@@ -111,12 +111,14 @@ fi
 # -------------
 # Auf tty2 ins X starten.
 
-if [[ $(tty) == "/dev/tty2" ]]
+t=$(tty)
+if [[ $t == "/dev/tty2" || $t == "/dev/tty3" ]]
 then
-	mv -f ~/.xsession.log.{2,3}
-	mv -f ~/.xsession.log.{1,2}
-	mv -f ~/.xsession.log{,.1}
-	exec 1>~/.xsession.log
+	export STARTUP_TTY=$t
+	mv -f ~/.xsession-${t}.log.{2,3}
+	mv -f ~/.xsession-${t}.log.{1,2}
+	mv -f ~/.xsession-${t}.log{,.1}
+	exec 1>~/.xsession-${t}.log
 	exec 2>&1
 	exec 0<&-
 	exec startx
