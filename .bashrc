@@ -115,6 +115,7 @@ t=$(tty)
 if [[ $t == "/dev/tty2" || $t == "/dev/tty3" ]]
 then
 	export STARTUP_TTY=$t
+	t=${t##*/}
 	mv -f ~/.xsession-${t}.log.{2,3}
 	mv -f ~/.xsession-${t}.log.{1,2}
 	mv -f ~/.xsession-${t}.log{,.1}
