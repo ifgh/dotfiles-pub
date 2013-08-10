@@ -151,6 +151,9 @@ map <Leader>si :%s/[^[:space:]]\zs[[:space:]]\{2,\}\ze[^[:space:]]/ /gc<CR>
 " Suche non-ASCII-Zeichen
 map <Leader>sa /[^\x00-\x7F]<CR>
 
+" Spawn XTerm
+map <Leader>sx :silent !xterm&<CR>
+
 " Quotes wechseln
 map <Leader>qgf :%s/\v"([^"]+)"/»\1«/gc<CR>
 map <Leader>qfg :%s/\v»([^«]+)«/"\1"/gc<CR>
