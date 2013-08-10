@@ -143,15 +143,6 @@ xterm-tac-jabber-hipchat*color0: #202020
 
 
 ! ---------------------------------------------------------------------
-! Beamerfarben fuers XTerm
-
-xterm-beamer*font: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
-xterm-beamer*cursorColor: white
-xterm-beamer*background: white
-xterm-beamer*foreground: black
-
-
-! ---------------------------------------------------------------------
 ! Retro-Terminal
 
 xterm-retro*termName: vt100
