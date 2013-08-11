@@ -4,7 +4,6 @@
 # sind.
 
 alias s='screen -R'
-alias tm='tmux'
 alias v='vim -p'
 alias g='git'
 alias gk='gitk'
@@ -17,7 +16,6 @@ alias media='cd /media; l'
 alias mnt='cd /mnt; l'
 alias mntj='cd /mnt/jupiter; l'
 alias pp='colored_pstree -pl | less'
-alias images='feh --force-aliasing -W 580 -tr'
 alias p='pdf-viewer'
 alias ww='wget -c'
 alias con='contacts_generic_query'
@@ -31,8 +29,6 @@ alias mp2='mplayer -cache 2048 -playlist'
 alias mp8='mplayer -cache 8192 -playlist'
 alias dvd='mplayer dvdnav:// -nosub -noautosub -dvd-device /dev/sr0'
 alias dvdd='mplayer dvdnav:// -nosub -noautosub -vf pp=lb -dvd-device /dev/sr0'
-
-alias alisys='mpop -a -C ~/work/dotfiles/.mpoprc-alice-system'
 
 alias gblobs='cd -- "$(gitary --printblobdir)"'
 alias dof='cd ~/work/dotfiles'
