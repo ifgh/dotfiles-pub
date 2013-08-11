@@ -49,7 +49,7 @@ shopt -s histreedit            # Neuer Versuch bei falschen "!"-Geschichten.
 # "Autostart":
 
 # Recording device erstmal auf's Samson setzen.
-record_samson
+. recorddev samson
 
 # Diese Verzeichnisse will ich eh immer haben:
 mkdir -p /tmp/{download,tmp}

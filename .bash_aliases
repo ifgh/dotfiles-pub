@@ -43,6 +43,3 @@ alias binp='cd ~/bin-pub'
 
 alias :q='logout'
 alias :qa='logout'
-
-alias record_default='unset RTSPECCY_CAPTURE_DEVICE'
-alias record_samson='export RTSPECCY_CAPTURE_DEVICE="front:CARD=C03U,DEV=0"'
