@@ -36,9 +36,6 @@ nmap <Leader>dotb :tabe ~/.bashrc<CR>
 			\:tabe ~/work/dotfiles-pub/.bash_environment<CR>
 nmap <Leader>dotm :tabe ~/.muttrc<CR>
 nmap <Leader>dotx :tabe ~/.Xresources<CR>
-nmap <Leader>dota :tabe ~/work/dotfiles/.awesome/rc.lua<CR>
-			\:tabe ~/work/dotfiles/.awesome/theme.lua<CR>
-nmap <Leader>dotl :tabe ~/work/dotfiles/.luakit/<CR>
 
 
 " -------------
@@ -104,10 +101,11 @@ call AddAllColorColumns(81, 300)
 " Vervollständigung mit schönem Menü.
 set wildmenu
 
-" Rewrapping von gq} auf q
+" Rewrapping von gq} auf Q
 map Q gq}
 
-" Besseres Movement in langen Zeilen.
+" Besseres Movement in langen Zeilen: j und k bedeuten jetzt eine
+" Bewegung um eine *sichtbare* Zeile.
 nmap k gk
 nmap j gj
 
@@ -144,7 +142,7 @@ set sidescrolloff=0
 " Modelines immer an, auch für root.
 set modeline
 
-" Shortcut, um trailing whitespace zu killen.
+" Shortcut, um trailing und inner whitespace zu killen.
 map <Leader>st :%s/[[:space:]]\+$//gc<CR>
 map <Leader>si :%s/[^[:space:]]\zs[[:space:]]\{2,\}\ze[^[:space:]]/ /gc<CR>
 
@@ -351,7 +349,7 @@ endif
 " -------------
 " Hexkram
 
-" vim -b : edit binary using xxd-format!
+" Edit *.bin using xxd-format
 augroup Binary
 	au!
 	au BufReadPre  *.bin let &bin=1
@@ -362,19 +360,6 @@ augroup Binary
 	au BufWritePost *.bin if &bin | %!xxd
 	au BufWritePost *.bin set nomod | endif
 augroup END
-
-
-" -------------
-" Hotfix für kaputtes Bash-Highlighting
-
-if !exists(":Bash")
-	command Bash syntax off | let b:is_bash = 1 | syntax on
-	map <Leader>sb :Bash<CR>
-endif
-if !exists(":NoBash")
-	command NoBash syntax off | unlet b:is_bash | syntax on
-	map <Leader>sn :NoBash<CR>
-endif
 
 
 " -------------
@@ -455,12 +440,6 @@ command! TNow :exe ":tabe " . strftime("%F--%H-%M-%S") . ".txt"
 
 nmap <Leader>ggu :w \| !~/work/troff/lib/plaintext/render "%"<CR>
 nmap <Leader>gga :w \| !~/work/troff/lib/plaintext/render "%" ascii<CR>
-
-
-" -------------
-" Dinge notieren
-
-command! SWrite :se nonu | vsp | se nonu | se so=999 | wincmd l
 
 
 " -------------
