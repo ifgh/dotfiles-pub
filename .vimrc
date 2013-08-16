@@ -458,3 +458,9 @@ nmap <Leader>L o<ESC>pBi*<ESC>ea*<ESC>o<CR>
 if filereadable("/home/void/.vimrc.local")
 	source ~/.vimrc.local
 endif
+
+
+" -------------
+" Settings, die vom Dateityp abhängen
+
+autocmd FileType python setlocal et sta ts=4 sw=4
