@@ -30,8 +30,6 @@ static const Rule rules[] = {
 	{ "Firefox",             NULL,              NULL,  1 << (1 - 1),  False,      -1,      False },
 	{ "Gitk",                NULL,              NULL,  0,             True,       -1,      False },
 	{ "Hgk",                 NULL,              NULL,  0,             True,       -1,      False },
-	{ "libreoffice-calc",    NULL,              NULL,  0,             True,       -1,      False },
-	{ "libreoffice-writer",  NULL,              NULL,  0,             True,       -1,      False },
 	{ "MPlayer",             NULL,              NULL,  0,             True,       -1,      True  },
 	{ "qemu",                NULL,              NULL,  0,             True,       -1,      False },
 	{ "Vncviewer",           NULL,              NULL,  0,             True,       -1,      False },
