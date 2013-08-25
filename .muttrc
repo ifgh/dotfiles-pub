@@ -32,7 +32,7 @@ set use_envelope_from=yes
 
 # Editor / composing
 set edit_headers=yes
-set editor="vim -c 'set textwidth=72' -c 'set ft=mailgroff' +"
+set editor="vim +"
 
 
 # -------------
