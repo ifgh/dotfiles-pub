@@ -101,20 +101,8 @@ call AddAllColorColumns(81, 300)
 " Vervollständigung mit schönem Menü.
 set wildmenu
 
-" Intelligent re-wrapping: If tw is set, use that value. Otherwise use a
-" default value of 72 (instead of the builtin value of 79).
-fun! WrapZero()
-	if (&tw == 0)
-		let twold=&tw
-		set tw=72
-		norm gq}
-		exec 'set tw=' . twold
-		unlet twold
-	else
-		norm gq}
-	endif
-endfun
-map Q :call WrapZero()<CR>
+" Rewrapping von gq} auf Q
+map Q gq}
 
 " Toggle tw=0 / tw=72
 fun! ToggleTextwidth()
@@ -146,6 +134,7 @@ map <F12> :noh<CR>
 inoremap <C-@> <Space>
 
 " Tabs und Umbrüche kontrollieren
+set tw=72
 set nolist
 set number
 set ai tabstop=4 sw=4
@@ -485,4 +474,3 @@ endif
 " Settings, die vom Dateityp abhängen
 
 autocmd FileType python setlocal et sta ts=4 sw=4
-autocmd FileType gitary,groff,nroff,plaintex,tex setlocal tw=72
