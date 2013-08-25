@@ -116,6 +116,16 @@ fun! WrapZero()
 endfun
 map Q :call WrapZero()<CR>
 
+" Toggle tw=0 / tw=72
+fun! ToggleTextwidth()
+	if (&tw == 0)
+		set tw=72
+	else
+		set tw=0
+	endif
+endfun
+nmap <Leader>W :call ToggleTextwidth()<CR>
+
 " Besseres Movement in langen Zeilen: j und k bedeuten jetzt eine
 " Bewegung um eine *sichtbare* Zeile.
 nmap k gk
