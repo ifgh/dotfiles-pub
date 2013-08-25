@@ -465,7 +465,7 @@ nmap <Leader>tb :exe "tabe " . expand("%:h")<CR>
 nmap <Leader>l ea\|<ESC>Bi\|<ESC>lyw
 nmap <Leader>L o<ESC>pBi*<ESC>ea*<ESC>o<CR>
 
-if filereadable("/home/void/.vimrc.local")
+if filereadable(glob("~/.vimrc.local"))
 	source ~/.vimrc.local
 endif
 
