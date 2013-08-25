@@ -107,9 +107,9 @@ map Q gq}
 " Toggle tw=0 / tw=72
 fun! ToggleTextwidth()
 	if (&tw == 0)
-		set tw=72
+		setl tw=72
 	else
-		set tw=0
+		setl tw=0
 	endif
 endfun
 nmap <Leader>W :call ToggleTextwidth()<CR>
