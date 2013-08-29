@@ -6,11 +6,6 @@
 # eines sein, damit ich möglichst viel Funktionalität in
 # wiederverwendbaren und kombinierbaren Skripten habe.
 
-cl()
-{
-	cd -- "$@" && l
-}
-
 mt()
 {
 	mkdir -p -- "$@" && cd -- "$@"

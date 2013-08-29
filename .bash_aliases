@@ -22,11 +22,6 @@ alias con='contacts_generic_query'
 
 alias m='mplayer'
 alias mmute='mplayer -ao null'
-alias m2='mplayer -cache 2048'
-alias m8='mplayer -cache 8192'
-alias mp='mplayer -playlist'
-alias mp2='mplayer -cache 2048 -playlist'
-alias mp8='mplayer -cache 8192 -playlist'
 alias dvd='mplayer dvdnav:// -nosub -noautosub -dvd-device /dev/sr0'
 alias dvdd='mplayer dvdnav:// -nosub -noautosub -vf pp=lb -dvd-device /dev/sr0'
 
@@ -36,6 +31,3 @@ alias dofp='cd ~/work/dotfiles-pub'
 alias dofs='cd ~/crypt/mount/tresor/dotfiles-secure'
 alias bin='cd ~/bin'
 alias binp='cd ~/bin-pub'
-
-alias :q='logout'
-alias :qa='logout'
