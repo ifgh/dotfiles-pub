@@ -14,7 +14,6 @@ work/dotfiles-pub/.lynx.cfg	.lynx.cfg
 work/dotfiles-pub/.mailcap	.mailcap
 work/dotfiles-pub/.muttrc	.muttrc
 work/dotfiles-pub/.mplayer	.mplayer
-/tmp/dwb-temp-profile	.config/dwb
 /tmp/ff-temp-profile/pentadactyl-home	.pentadactyl
 work/dotfiles-pub/.pentadactylrc	.pentadactylrc
 work/dotfiles-pub/.urlview	.urlview

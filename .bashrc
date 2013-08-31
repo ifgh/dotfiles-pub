@@ -75,23 +75,6 @@ fi
 
 
 # -------------
-# dwb: Temporäres Profil
-
-tmptarget=/tmp/dwb-temp-profile
-tmpbase=~/work/dotfiles-pub/.dwb
-if [[ ! -d "$tmptarget" ]] && [[ -d "$tmpbase" ]]
-then
-	cp -aRL "$tmpbase" "$tmptarget"
-	find "$tmptarget" -type f -exec \
-		sed -i "s#__EMPLOYER_DOMAIN__#$(< ~/.employer_domain)#" '{}' ';'
-	find "$tmptarget" -type f -exec \
-		sed -i "s#__USER_HOME__#$HOME#" '{}' ';'
-
-	[[ -r ~/work/dotfiles/.dwb-local ]] && . ~/work/dotfiles/dwb-local
-fi
-
-
-# -------------
 # sxiv cache
 
 [[ ! -d "/tmp/$USER-sxiv-cache" ]] && mkdir "/tmp/$USER-sxiv-cache"
