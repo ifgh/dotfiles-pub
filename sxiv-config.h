@@ -53,6 +53,19 @@ enum {
 enum { THUMB_SIZE = 60 };
 
 #endif
+#ifdef _RENDER_CONFIG
+
+/* if false, pixelate images at zoom level != 100%,
+ * toggled with 'a' key binding
+ */
+static const bool RENDER_ANTI_ALIAS = true;
+
+/* if true, use white background for alpha layer,
+ * toggled with 'A' key binding
+ */
+static const bool RENDER_WHITE_ALPHA = false;
+
+#endif
 #ifdef _MAPPINGS_CONFIG
 
 /* keyboard mappings for image and thumbnail mode: */
@@ -80,6 +93,10 @@ static const keymap_t keys[] = {
 	{ true,   XK_n,             i_navigate_frame,     (arg_t) +1 },
 	{ true,   XK_p,             i_navigate_frame,     (arg_t) -1 },
 	{ true,   XK_space,         i_toggle_animation,   (arg_t) None },
+
+	{ false,  XK_m,             it_toggle_image_mark, (arg_t) None },
+	{ false,  XK_N,             it_navigate_marked,   (arg_t) +1 },
+	{ false,  XK_P,             it_navigate_marked,   (arg_t) -1 },
 
 	{ false,  XK_h,             it_scroll_move,       (arg_t) DIR_LEFT },
 	{ false,  XK_Left,          it_scroll_move,       (arg_t) DIR_LEFT },
@@ -114,11 +131,12 @@ static const keymap_t keys[] = {
 	{ false,  XK_E,             i_fit_to_win,         (arg_t) SCALE_HEIGHT },
 	{ false,  XK_W,             i_fit_to_img,         (arg_t) None },
 
-	{ false,  XK_less,          i_rotate,             (arg_t) DIR_LEFT },
-	{ false,  XK_greater,       i_rotate,             (arg_t) DIR_RIGHT },
+	{ false,  XK_less,          i_rotate,             (arg_t) DEGREE_270 },
+	{ false,  XK_greater,       i_rotate,             (arg_t) DEGREE_90 },
+	{ false,  XK_question,      i_rotate,             (arg_t) DEGREE_180 },
 
-	{ false,  XK_backslash,     i_flip,               (arg_t) FLIP_HORIZONTAL },
-	{ false,  XK_bar,           i_flip,               (arg_t) FLIP_VERTICAL },
+	{ false,  XK_bar,           i_flip,               (arg_t) FLIP_HORIZONTAL },
+	{ false,  XK_underscore,    i_flip,               (arg_t) FLIP_VERTICAL },
 
 	{ false,  XK_a,             i_toggle_antialias,   (arg_t) None },
 	{ false,  XK_A,             it_toggle_alpha,      (arg_t) None },
@@ -132,10 +150,14 @@ static const keymap_t keys[] = {
 			"mogrify -rotate -90 \"$SXIV_IMG\"" },
 	{ true,   XK_greater,       it_shell_cmd,         (arg_t) \
 			"mogrify -rotate +90 \"$SXIV_IMG\"" },
+	{ true,   XK_question,      it_shell_cmd,         (arg_t) \
+			"mogrify -rotate 180 \"$SXIV_IMG\"" },
 	{ true,   XK_comma,         it_shell_cmd,         (arg_t) \
 			"jpegtran -rotate 270 -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
 	{ true,   XK_period,        it_shell_cmd,         (arg_t) \
 			"jpegtran -rotate  90 -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
+	{ true,   XK_slash,         it_shell_cmd,         (arg_t) \
+			"jpegtran -rotate 180 -copy all -outfile \"$SXIV_IMG\" \"$SXIV_IMG\"" },
 };
 
 /* mouse button mappings for image mode: */
