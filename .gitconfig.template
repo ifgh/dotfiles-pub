@@ -9,14 +9,8 @@
 	ci = commit -v
 	co = checkout
 	l = log --graph --decorate --oneline
-	ll = log --graph --decorate --pretty=fuller
-	lf = log --graph --decorate --oneline HEAD..FETCH_HEAD
-	llf = log --graph --decorate --pretty=fuller HEAD..FETCH_HEAD
 	s = status
 	d = diff
 	dc = diff --cached
-	df = diff HEAD..FETCH_HEAD
-	dh = diff HEAD
-	unstage = reset
 [merge]
 	tool = vimdiff
