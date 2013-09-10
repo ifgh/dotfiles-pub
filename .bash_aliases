@@ -6,8 +6,6 @@
 alias s='screen -R'
 alias v='vim -p'
 alias g='git'
-alias gk='gitk'
-alias gka='gitk --all'
 alias e='elinks'
 alias tt='mt /tmp/tmp; l'
 alias td='mt /tmp/download; l'
