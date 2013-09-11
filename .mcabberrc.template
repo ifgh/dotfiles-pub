@@ -125,7 +125,9 @@ set cmdhistory_lines = 250
 # To display only the connected buddies, use "ofdna".
 # Please note that this option is only used at startup (once mcabber is
 # running you can use "/roster display").
-#set roster_display_filter = ofdna_
+set roster_display_filter = ofdna
+bind M104 = roster display ofdna
+bind M108 = roster display ofdna_
 
 # By default command line completion is case-sensitive; this can be changed
 # by setting the option 'completion_ignore_case' to 1.
