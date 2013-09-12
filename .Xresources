@@ -51,11 +51,19 @@ XTerm*omitTranslation: fullscreen
 ! Notiz für die Zukunft: Egal, wie oft du es probierst, mit deiner
 ! jetzigen Hardware ist XFT zu langsam. Es flackert. Du wirst dich nicht
 ! daran gewöhnen.
-XTerm*font3: -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+#ifdef SRVR_sedna
 XTerm*font:  -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+XTerm*font3: -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
 XTerm*font4: -*-vga-*-*-*-*-*-*-*-*-*-*-iso10646-*
 XTerm*font5: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
 XTerm*font6: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
+#else
+XTerm*font:  -*-vga-*-*-*-*-*-*-*-*-*-*-iso10646-*
+XTerm*font3: -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+XTerm*font4: -*-vga-*-*-*-*-*-*-*-*-*-*-iso10646-*
+XTerm*font5: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
+XTerm*font6: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
+#endif
 
 ! Farben, based on Thayer:
 ! http://cinderwick.ca/files/configs/Xdefaults
