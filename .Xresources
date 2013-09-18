@@ -30,16 +30,17 @@ Xcursor.size: 16
 ! ---------------------------------------------------------------------
 ! XTerm
 
+! Just for floating mode.
 XTerm.vt100.geometry: 80x24
 
-! Eh klar.
+! I do not want to re-login to re-load my bash settings.
 XTerm*loginShell: true
-XTerm*saveLines: 50000
 
 ! Bell settings.
 XTerm*bellIsUrgent: true
 
 ! Scrolling.
+XTerm*saveLines: 50000
 XTerm*allowScrollLock: true
 
 ! Bei Alt+Enter nicht in Fullscreen gehen. Für solche Funktionen ist der
@@ -47,62 +48,53 @@ XTerm*allowScrollLock: true
 ! drauf...
 XTerm*omitTranslation: fullscreen
 
-! Ohne XFT! Schnell!
-! Notiz für die Zukunft: Egal, wie oft du es probierst, mit deiner
-! jetzigen Hardware ist XFT zu langsam. Es flackert. Du wirst dich nicht
-! daran gewöhnen.
-#ifdef SRVR_triton
-XTerm*font:  -*-vga-*-*-*-*-*-*-*-*-*-*-iso10646-*
-XTerm*font3: -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
-XTerm*font4: -*-vga-*-*-*-*-*-*-*-*-*-*-iso10646-*
-XTerm*font5: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
-XTerm*font6: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
-#else
-XTerm*font:  -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
-XTerm*font3: -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
-XTerm*font4: -*-vga-*-*-*-*-*-*-*-*-*-*-iso10646-*
-XTerm*font5: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
-XTerm*font6: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
-#endif
+! Notes:
+! - Do not fiddle with Xft.
+! - Do not fiddle with font sizes.
+! - Do not fiddle with font families.
+XTerm.vt100.font:  -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+XTerm.vt100.font3: -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+XTerm.vt100.font4: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+XTerm.vt100.font5: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
+XTerm.vt100.font6: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
 
-! Farben, based on Thayer:
-! http://cinderwick.ca/files/configs/Xdefaults
-XTerm*background:  #000000
-XTerm*foreground:  #aaaaaa
-XTerm*cursorColor: #87FF00
+! Colors, based on a theme by Thayer:
+XTerm.vt100.background:  #000000
+XTerm.vt100.foreground:  #aaaaaa
+XTerm.vt100.cursorColor: #87FF00
 ! Black
-XTerm*color0:      #0e0e0e
-XTerm*color8:      #555753
+XTerm.vt100.color0:      #0e0e0e
+XTerm.vt100.color8:      #555753
 ! Red
-XTerm*color1:      #ff6565
-XTerm*color9:      #cf0000
+XTerm.vt100.color1:      #ff6565
+XTerm.vt100.color9:      #cf0000
 ! Green
-XTerm*color2:      #93d44f
-XTerm*color10:     #00cf00
+XTerm.vt100.color2:      #93d44f
+XTerm.vt100.color10:     #00cf00
 ! Yellow
-XTerm*color3:      #eab93d
-XTerm*color11:     #ffc123
+XTerm.vt100.color3:      #eab93d
+XTerm.vt100.color11:     #ffc123
 ! Blue
-XTerm*color4:      #204a87
-XTerm*color12:     #3465a4
+XTerm.vt100.color4:      #204a87
+XTerm.vt100.color12:     #3465a4
 ! Mangenta
-XTerm*color5:      #ce5c00
-XTerm*color13:     #f57900
+XTerm.vt100.color5:      #ce5c00
+XTerm.vt100.color13:     #f57900
 ! Cyan
-XTerm*color6:      #89b6e2
-XTerm*color14:     #46a4ff
+XTerm.vt100.color6:      #89b6e2
+XTerm.vt100.color14:     #46a4ff
 ! White
-XTerm*color7:      #cccccc
-XTerm*color15:     #ffffff
+XTerm.vt100.color7:      #cccccc
+XTerm.vt100.color15:     #ffffff
 
 ! Bold wie am Linux VT: Grundsätzlich gibt es keine fetten Zeichen (die
 ! sehen mit dem VGA-Font furchtbar aus bzw. gehen mit kleinem Terminus
 ! gar nicht). Wurde explizit eine Farbe gesetzt und dann noch bold, dann
 ! nimm die "Bold-Farbe" (alte Farbe + 8). Wurde gar keine Farbe gesetzt,
 ! nimm weiß (= Farbe 15).
-XTerm*boldMode:     false
-XTerm*colorBDMode:  true
-XTerm*colorBD:      #FFFFFF
+XTerm.vt100.boldMode:     false
+XTerm.vt100.colorBDMode:  true
+XTerm.vt100.colorBD:      #FFFFFF
 
 ! UTF-8 im Titel:
 XTerm*utf8Title: 1
@@ -114,7 +106,7 @@ XTerm*metaSendsEscape: true
 XTerm*termName: xterm-256color
 
 ! Keybindings:
-XTerm*VT100.Translations: #override \
+XTerm.vt100.Translations: #override \
 		Ctrl Shift<Key>c: copy-selection(CLIPBOARD) \n\
 		Ctrl Shift<Key>v: insert-selection(CLIPBOARD) \n\
 		Shift<Key>Prior: scroll-back(1,halfpage) \n\
