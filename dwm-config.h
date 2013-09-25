@@ -41,6 +41,7 @@ static const Rule rules[] = {
 	{ "XTerm",               "xterm-floating",  NULL,  0,             True,       -1,      False },
 	{ "XTerm",               "xterm-lock",      NULL,  0,             True,       -1,      False },
 	{ "XTerm",               "xterm-tac",       NULL,  1 << (2 - 1),  False,      -1,      False },
+	{ "XTerm",               "xterm-bg",        NULL,  1 << (21 - 1), False,      -1,      False },
 };
 
 /* layout(s) */
