@@ -41,3 +41,7 @@ menubar {
 .tabbrowser-tabs {
 	border-left: #9e9a91 1px solid !important;
 }
+
+.findbar-closebutton {
+	margin-bottom: -2px !important;
+}
