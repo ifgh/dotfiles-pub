@@ -13,7 +13,7 @@ static const unsigned int gappx     = 0;        /* useless gap */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
-static Bool barbarrier              = True;     /* Put barriers around the bar */
+static Bool screenbarriers          = True;     /* Put barriers around the bar */
 
 /* tagging */
 static const char *tags[] = { "www", "tac",   "3",  "4",  "5",  "6",  "7",  "8",  "9",  "0",
@@ -121,8 +121,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_f,      togglefullscreen, {0}, },
 	{ MODKEY,                       XK_m,      maximizefloater, {0}, },
 	{ MODKEY,                       XK_c,      centerfloater,  {0}, },
-	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
+	{ MODKEY,                       XK_comma,  focusmonwarp,   {.i = -1 } },
+	{ MODKEY,                       XK_period, focusmonwarp,   {.i = +1 } },
+	{ MODKEY|ControlMask,           XK_comma,  focusmon,       {.i = -1 } },
+	{ MODKEY|ControlMask,           XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_h,      shiftview,      {.i = -1 } },
