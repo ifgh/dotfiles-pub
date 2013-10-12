@@ -9,8 +9,12 @@ static const char selbordercolor[]  = "#8CFF00";
 static const char selbgcolor[]      = "#383838";
 static const char selfgcolor[]      = "#8CFF00";
 static const unsigned int borderpx  = 5;        /* border pixel of windows */
+#ifdef SRVR_sedna
 static const unsigned int gappx     = 0;        /* useless gap */
-static const unsigned int snap      = 32;       /* snap pixel */
+#else
+static const unsigned int gappx     = 30;       /* useless gap */
+#endif
+static const unsigned int snap      = 10;       /* snap pixel */
 static const Bool showbar           = True;     /* False means no bar */
 static const Bool topbar            = True;     /* False means bottom bar */
 static Bool screenbarriers          = True;     /* Put barriers around the bar */
