@@ -2,6 +2,10 @@ menubar {
 	margin-top: -1px !important;
 }
 
+findbar {
+	margin-bottom: -1px !important;
+}
+
 /* Based on: https://bbs.archlinux.org/viewtopic.php?id=166169 */
 .tabbrowser-tab[selected="true"] {
 	background: #4b6983 !important;
@@ -40,8 +44,4 @@ menubar {
 
 .tabbrowser-tabs {
 	border-left: #9e9a91 1px solid !important;
-}
-
-.findbar-closebutton {
-	margin-bottom: -2px !important;
 }
