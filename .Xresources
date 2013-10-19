@@ -61,7 +61,7 @@ XTerm.vt100.font6: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
 ! Colors, based on a theme by Thayer:
 XTerm.vt100.background:  #000000
 XTerm.vt100.foreground:  #aaaaaa
-XTerm.vt100.cursorColor: #87FF00
+XTerm.vt100.cursorColor: #8CFF00
 ! Black
 XTerm.vt100.color0:      #0e0e0e
 XTerm.vt100.color8:      #555753
