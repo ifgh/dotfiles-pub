@@ -19,3 +19,8 @@ bgthis()
 	echo -n 'ionice: '
 	ionice -p $BASHPID
 }
+
+bwenter()
+{
+	. ~/git/blockwart/virtualenv/bin/activate
+}
