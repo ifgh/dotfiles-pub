@@ -3,7 +3,8 @@ menubar {
 }
 
 findbar {
-	margin-bottom: -1px !important;
+	margin-bottom: -5px !important;
+	margin-right: -8px !important;
 }
 
 /* Based on: https://bbs.archlinux.org/viewtopic.php?id=166169 */
