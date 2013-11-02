@@ -132,20 +132,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_h,      tagrel,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_l,      tagrel,         {.i = +1 } },
 	{ MODKEY|ControlMask,           XK_a,      tag,            {.ui = ~0 } },
-	{ Mod1Mask|ShiftMask,           XK_j,      spawn,          SHCMD("xdotool mousemove_relative -- 0 10") },
-	{ Mod1Mask|ShiftMask,           XK_k,      spawn,          SHCMD("xdotool mousemove_relative -- 0 -10") },
-	{ Mod1Mask|ShiftMask,           XK_h,      spawn,          SHCMD("xdotool mousemove_relative -- -10 0") },
-	{ Mod1Mask|ShiftMask,           XK_l,      spawn,          SHCMD("xdotool mousemove_relative -- 10 0") },
-	{ Mod1Mask|ShiftMask|ControlMask, XK_j,    spawn,          SHCMD("xdotool mousemove_relative -- 0 40") },
-	{ Mod1Mask|ShiftMask|ControlMask, XK_k,    spawn,          SHCMD("xdotool mousemove_relative -- 0 -40") },
-	{ Mod1Mask|ShiftMask|ControlMask, XK_h,    spawn,          SHCMD("xdotool mousemove_relative -- -40 0") },
-	{ Mod1Mask|ShiftMask|ControlMask, XK_l,    spawn,          SHCMD("xdotool mousemove_relative -- 40 0") },
-	{ Mod1Mask|ShiftMask,           XK_space,  spawn,          SHCMD("xdotool click --clearmodifiers 1") },
-	{ Mod1Mask|ShiftMask|ControlMask, XK_space, spawn,         SHCMD("xdotool click --clearmodifiers 2") },
-	{ Mod1Mask|ShiftMask,           XK_i,      spawn,          SHCMD("xdotool click --clearmodifiers 5") },
-	{ Mod1Mask|ShiftMask,           XK_o,      spawn,          SHCMD("xdotool click --clearmodifiers 4") },
-	{ Mod1Mask|ShiftMask,           XK_u,      spawn,          SHCMD("xdotool click --clearmodifiers 8") },
-	{ Mod1Mask|ShiftMask,           XK_p,      spawn,          SHCMD("xdotool click --clearmodifiers 9") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
