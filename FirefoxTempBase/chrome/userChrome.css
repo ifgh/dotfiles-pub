@@ -47,3 +47,33 @@ findbar {
 .tabbrowser-tabs {
 	border-left: #9e9a91 1px solid !important;
 }
+
+/* Fix order of buttons in findbar */
+.findbar-find-next {
+	margin-left: -62px !important;
+}
+
+.findbar-find-previous {
+	margin-left: 30px !important;
+	-moz-border-end-width: 1px !important;
+}
+
+.findbar-find-status {
+	margin-left: 60px !important;
+}
+
+.findbar-find-next:focus + .findbar-find-previous {
+  -moz-border-start-width: 0 !important;
+}
+
+.findbar-find-next:focus {
+  -moz-border-end-width: 1px !important;
+}
+
+.findbar-find-previous:focus + .findbar-find-next {
+  -moz-border-start-width: 1px !important;
+}
+
+.findbar-find-previous:focus {
+  -moz-border-end-width: 1px !important;
+}
