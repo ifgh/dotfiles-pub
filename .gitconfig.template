@@ -5,6 +5,11 @@
 	untracked = cyan
 [core]
 	pager = less
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
 [alias]
 	ci = commit -v
 	co = checkout
