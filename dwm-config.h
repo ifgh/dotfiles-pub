@@ -3,10 +3,10 @@
 /* appearance */
 static const char font[]            = "-*-terminus-medium-r-*-*-12-*-*-*-*-*-*-*";
 static const char normbordercolor[] = "#333333";
-static const char normbgcolor[]     = "#707070";
-static const char normfgcolor[]     = "#DFDFDF";
+static const char normbgcolor[]     = "#404040";
+static const char normfgcolor[]     = "#AFAFAF";
 static const char selbordercolor[]  = "#8CFF00";
-static const char selbgcolor[]      = "#8CFF00";
+static const char selbgcolor[]      = "#6AC100";
 static const char selfgcolor[]      = "#000000";
 static const char infobgcolor[]     = "#222222";
 static const char infofgcolor[]     = "#A0A0A0";
