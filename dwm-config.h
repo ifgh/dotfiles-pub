@@ -94,7 +94,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("xterm -e ncmpcpp") },
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          SHCMD("xterm -e alsamixer") },
 	{ MODKEY|ShiftMask,             XK_u,      spawn,          SHCMD("xterm -name xterm-floating -e im-urlchoice") },
-	{ MODKEY|ShiftMask,             XK_x,      spawn,          SHCMD("play-clipboard-url") },
 	{ MODKEY|ShiftMask,             XK_c,      spawn,          SHCMD("browser-clipboard") },
 	{ MODKEY|ShiftMask,             XK_v,      spawn,          SHCMD("xterm -hold -name xterm-floating -e resolve-shortened-url") },
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("asciitraf-all") },
