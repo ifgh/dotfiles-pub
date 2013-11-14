@@ -386,13 +386,25 @@ set statusline=%f\ %y\ \ %h%m%r
 			\%=\ [C:%4b,%4B]\ [X:%3v/%3{&tw}]\ [Y:%5l/%5L]
 
 
-" -------------
-" Druckoptionen
+" -------
+" Printing
 
-set printoptions=formfeed:y,syntax:n,header:4,
-			\left:10mm,right:10mm,top:10mm,bottom:10mm
-set printheader=%<%f%h%m
-			\\ (%{strftime('%F\ %T',getftime(expand('%')))})%=Page\ %N
+" Printing from Vim is complicated due to UTF-8. The author of the PS
+" driver explained it here:
+" http://vim.1045645.n5.nabble.com/Printing-with-utf-8-characters-on-Windows-td1193441.html
+" So, just use plain old "lp" as a workaround.
+
+fun! Hardcopy()
+	" CUPS documentation says about "-o page-*":
+	" The value argument is the margin in points; each point is 1/72
+	" inch or 0.35mm.
+	" http://www.cups.org/documentation.php/doc-1.7/options.html
+	" I want a margin of about 1.8cm.
+	exe "!lp -o media=A4 -o page-left=50 -o page-right=50"
+				\" -o page-top=50 -o page-bottom=50 -o prettyprint"
+				\(&pdev != "" ? " -d " . &pdev : "") . " " . expand("%")
+endfun
+command! Hardcopy :call Hardcopy()
 
 
 " -------------
