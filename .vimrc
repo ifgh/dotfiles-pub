@@ -63,6 +63,22 @@ set nobackup
 set nowritebackup
 set viminfo=""
 
+" Speichere Swapfiles an einer zentralen Stelle (beachte die zwei
+" Slashes). Eliminiert global das Problem, dass immer *.swp-Dateien
+" rumliegen und in VCS'en ständig ignoriert werden müssen etc. Ja, es
+" liegt in einem tmpfs und ist nach einem Systemabsturz weg. Dieses
+" Risiko gehe ich ein, weil es mir wichtiger ist, dass sensible Daten,
+" die eventuell in einem encfs liegen, nicht durch ein Swapfile auf der
+" Platte landen. Recovery nach einem Crash des Systems (!) habe ich in
+" all den Jahren vielleicht ein Mal gebraucht.
+" Wenn ich eine solche Recovery in Zukunft mal gebraucht *hätte*, weiß
+" ich ja, welchen Commit ich reverten muss, nachdem sich der Ärger
+" gelegt hat. :-)
+if isdirectory('/tmp/vim') == 0
+	:silent !mkdir /tmp/vim >/dev/null 2>&1
+endif
+set directory=/tmp/vim//
+
 " Beim Schreiben der Swapfile kein fsync() absetzen. Das bewirkt einen
 " kurzen Hänger und nervt tierisch.
 set swapsync=
