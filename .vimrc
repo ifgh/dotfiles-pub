@@ -41,6 +41,8 @@ nmap <Leader>dotx :tabe ~/.Xresources<CR>
 " -------------
 " Grundlegendes Verhalten
 
+set virtualedit=block
+
 " Hotkeys, die die Tabbreite ändern.
 for i in range(1, 8)
 	exe 'map <ESC>'.i.' :set ts='.i.' sw='.i.'<CR>'
@@ -53,6 +55,9 @@ set showmatch
 " Nicht überlange Zeilen am Rand durch @s ersetzen, sondern nur am Ende
 " drei @s platzieren.
 set display+=lastline
+
+" Show unprintable characters as <xx>
+set display+=uhex
 
 " Aktualisiere weder Inhalt noch Fenster, solange noch irgendetwas
 " (Makro, Funktion, ...) ausgeführt wird.
