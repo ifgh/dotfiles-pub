@@ -1,8 +1,3 @@
-/* fix bug in FF25, loading icon not being animated */
-.tab-throbber[progress] {
-	list-style-image: url("loading.png") !important;
-}
-
 /* Fix big margins */
 menubar {
 	margin-top: -1px !important;
