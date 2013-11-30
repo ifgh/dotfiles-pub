@@ -79,10 +79,10 @@ set viminfo=""
 " Wenn ich eine solche Recovery in Zukunft mal gebraucht *hätte*, weiß
 " ich ja, welchen Commit ich reverten muss, nachdem sich der Ärger
 " gelegt hat. :-)
-if isdirectory('/tmp/vim') == 0
-	:silent !mkdir /tmp/vim >/dev/null 2>&1
+if isdirectory('/tmp/vim-' . $USER) == 0
+	:silent !mkdir /tmp/vim-$USER >/dev/null 2>&1
 endif
-set directory=/tmp/vim//
+set directory=/tmp/vim-$USER//
 
 " Beim Schreiben der Swapfile kein fsync() absetzen. Das bewirkt einen
 " kurzen Hänger und nervt tierisch.
