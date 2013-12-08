@@ -50,17 +50,15 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
+static const int nmaster      = 1;    /* number of clients in master area */
 #ifdef SRVR_sedna
 static const float mfact      = 0.5;  /* factor of master area size [0.05..0.95] */
-static const int nmaster      = 1;    /* number of clients in master area */
 #endif
 #ifdef SRVR_pinguin
 static const float mfact      = 0.55;
-static const int nmaster      = 2;
 #endif
 #ifdef SRVR_triton
 static const float mfact      = 0.6;
-static const int nmaster      = 2;
 #endif
 static const Bool sizehints_default = False; /* True means respect size hints in
                                                 tiled resizals. Can be overriden
