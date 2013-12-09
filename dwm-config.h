@@ -50,19 +50,12 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
-static const int nmaster      = 1;    /* number of clients in master area */
-#ifdef SRVR_sedna
-static const float mfact      = 0.5;  /* factor of master area size [0.05..0.95] */
-#endif
-#ifdef SRVR_pinguin
-static const float mfact      = 0.55;
-#endif
-#ifdef SRVR_triton
-static const float mfact      = 0.6;
-#endif
-static const Bool sizehints_default = False; /* True means respect size hints in
-                                                tiled resizals. Can be overriden
-                                                by a rule. */
+static const int nmaster_dynamic_max = 4;     /* Maximum number of clients in master column */
+static const int nmaster             = 0;     /* Can override nmaster_dynamic_max if > 0 */
+static const float mfact             = 0.5;   /* factor of master area size [0.05..0.95] */
+static const Bool sizehints_default  = False; /* True means respect size hints in
+                                                 tiled resizals. Can be overriden
+                                                 by a rule. */
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
