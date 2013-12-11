@@ -62,6 +62,8 @@ user_pref("gecko.mstone", "21.0");
 user_pref("general.autoScroll", true);
 user_pref("general.smoothScroll", false);
 user_pref("general.warnOnAboutConfig", false);
+user_pref("geo.enabled", false);
+user_pref("geo.wifi.uri", "");
 user_pref("image.high_quality_downscaling.enabled", false);
 user_pref("intl.charset.default", "UTF-8");
 user_pref("intl.charsetmenu.browser.cache", "UTF-8");
