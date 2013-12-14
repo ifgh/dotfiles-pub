@@ -50,7 +50,11 @@ static const Rule rules[] = {
 };
 
 /* layout(s) */
+#ifdef SRVR_sedna
+static const int nmaster_dynamic_max = 2;     /* Maximum number of clients in master column */
+#else
 static const int nmaster_dynamic_max = 4;     /* Maximum number of clients in master column */
+#endif
 static const int nmaster             = 0;     /* Can override nmaster_dynamic_max if > 0 */
 static const float mfact             = 0.5;   /* factor of master area size [0.05..0.95] */
 static const Bool sizehints_default  = False; /* True means respect size hints in
