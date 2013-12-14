@@ -43,6 +43,12 @@ XTerm*bellIsUrgent: true
 XTerm*saveLines: 50000
 XTerm*allowScrollLock: true
 
+! Scrollbar.
+XTerm.vt100.rightScrollBar: true
+XTerm.vt100.scrollbar.thickness: 20
+XTerm.vt100.scrollbar.background: #000000
+XTerm.vt100.scrollbar.foreground: #333333
+
 ! Bei Alt+Enter nicht in Fullscreen gehen. Für solche Funktionen ist der
 ! Window Manager zuständig und ich haue ständig fälschlicherweise
 ! drauf...
