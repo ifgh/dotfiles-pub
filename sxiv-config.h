@@ -156,6 +156,7 @@ static const keymap_t keys[] = {
 	/* open current image with given program: */
 	{ true,   XK_g,             it_open_with,         (arg_t) "gimp" },
 	{ true,   XK_b,             it_open_with,         (arg_t) "dmenu_bg" },
+	{ true,   XK_d,             it_open_with,         (arg_t) "xterm_delete" },
 
 	/* run shell command line on current file ("$SXIV_IMG"): */
 	{ true,   XK_less,          it_shell_cmd,         (arg_t) \
