@@ -232,7 +232,7 @@ fun! CompileAndRun(runProgram)
 	elseif filereadable("build.xml")
 		setl makeprg=ant
 	elseif &filetype == 'c'
-		setl makeprg=gcc\ -Wall\ -Wextra\ -o\ %<\ %
+		setl makeprg=${CC:-gcc}\ -std=gnu89\ -Wall\ -Wextra\ -Wpedantic\ -O2\ -o\ %<\ %
 	elseif &filetype == 'cpp'
 		setl makeprg=g++\ -Wall\ -Wextra\ -o\ %<\ %
 	elseif &filetype == 'java'
