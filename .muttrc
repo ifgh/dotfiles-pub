@@ -34,6 +34,10 @@ set use_envelope_from=yes
 set edit_headers=yes
 set editor="vim +"
 
+# Important when piping mails to other programs. Usually overriden by
+# macros.
+set pipe_decode
+
 
 # -------------
 # Keybinds:
