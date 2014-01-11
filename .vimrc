@@ -80,7 +80,7 @@ set viminfo=""
 " ich ja, welchen Commit ich reverten muss, nachdem sich der Ärger
 " gelegt hat. :-)
 if isdirectory('/tmp/vim-' . $USER) == 0
-	:silent !mkdir /tmp/vim-$USER >/dev/null 2>&1
+	:silent !install -dm700 /tmp/vim-$USER >/dev/null 2>&1
 endif
 set directory=/tmp/vim-$USER//
 

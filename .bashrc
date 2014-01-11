@@ -52,7 +52,7 @@ shopt -s histreedit            # Neuer Versuch bei falschen "!"-Geschichten.
 . recorddev samson
 
 # Diese Verzeichnisse will ich eh immer haben:
-mkdir -p /tmp/tmp
+install -dm1777 /tmp/tmp
 
 # Paste initialisieren.
 stouch
@@ -65,7 +65,8 @@ tmptarget=/tmp/ff-temp-profile
 tmpbase=~/.mozilla/firefox/FirefoxTempBase
 if [[ ! -d "$tmptarget" ]] && [[ -d "$tmpbase" ]]
 then
-	cp -aRL "$tmpbase" "$tmptarget"
+	install -dm700 "$tmptarget"
+	cp -aRL "$tmpbase"/* "$tmptarget"
 	sed -i "s#__USER_HOME__#$HOME#" "$tmptarget/prefs.js"
 	find "$tmptarget" -type f -exec \
 		sed -i "s#__EMPLOYER_DOMAIN__#$(< ~/.employer_domain)#" '{}' ';'
@@ -77,7 +78,7 @@ fi
 # -------------
 # sxiv cache
 
-[[ ! -d "/tmp/$USER-sxiv-cache" ]] && mkdir "/tmp/$USER-sxiv-cache"
+[[ ! -d "/tmp/$USER-sxiv-cache" ]] && install -dm700 "/tmp/$USER-sxiv-cache"
 if [[ ! -L ~/.sxiv/cache ]]
 then
 	mkdir -p ~/.sxiv
