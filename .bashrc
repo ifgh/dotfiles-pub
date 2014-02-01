@@ -79,11 +79,13 @@ fi
 # sxiv cache
 
 [[ ! -d "/tmp/$USER-sxiv-cache" ]] && install -dm700 "/tmp/$USER-sxiv-cache"
-if [[ ! -L ~/.sxiv/cache ]]
+if [[ ! -L ~/.cache/sxiv ]]
 then
-	mkdir -p ~/.sxiv
-	ln -s "/tmp/$USER-sxiv-cache" ~/.sxiv/cache
+	mkdir -p ~/.cache
+	ln -s "/tmp/$USER-sxiv-cache" ~/.cache/sxiv
 fi
+# XXX: Remove this in March 2014:
+rm -Rf ~/.sxiv
 
 
 # -------------
