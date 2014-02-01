@@ -17,5 +17,5 @@ case "$1" in
 "C-b")
 	dmenu_bg "$2" & ;;
 "C-d")
-	xterm_delete "$2" & ;;
+	xterm_delete "$2" ;;
 esac
