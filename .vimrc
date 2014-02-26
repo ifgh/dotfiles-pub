@@ -405,6 +405,7 @@ set statusline=%f\ %y\ \ %h%m%r
 			\\ \ %#Error#%{&bomb?'\ BOM\ ':''}%*
 			\\ \ %#Error#%{&paste?'\ PASTE\ ':''}%*
 			\\ \ %#Visual#%{&wrap?'\ WRAP\ ':''}%*
+			\\ \ %#Visual#%{&tw==0?'\ UNLIMITED\ ':''}%*
 			\%=\ [C:%4b,%4B]\ [X:%3v/%3{&tw}]\ [Y:%5l/%5L]
 
 
