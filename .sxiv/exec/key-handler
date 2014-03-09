@@ -18,4 +18,6 @@ case "$1" in
 	dmenu_bg "$2" & ;;
 "C-d")
 	xterm_delete "$2" ;;
+"C-y")
+	scopy "$2" ;;
 esac
