@@ -78,7 +78,7 @@ macro attach \cv "\
 # urlview
 macro index,pager,attach,compose \cb "\
 <enter-command> set my_pipe_decode=\$pipe_decode pipe_decode<Enter>\
-<pipe-message> urlview<Enter>\
+<pipe-message> urlview2<Enter>\
 <enter-command> set pipe_decode=\$my_pipe_decode; unset my_pipe_decode<Enter>" \
 "call urlview to extract URLs out of a message"
 
