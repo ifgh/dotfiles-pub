@@ -102,6 +102,9 @@ XTerm.vt100.boldMode:     false
 XTerm.vt100.colorBDMode:  true
 XTerm.vt100.colorBD:      #FFFFFF
 
+! Easier to see on my old screen.
+XTerm.vt100.pointerColor: red
+
 ! UTF-8 im Titel:
 XTerm*utf8Title: 1
 
