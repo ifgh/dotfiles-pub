@@ -84,8 +84,6 @@ then
 	mkdir -p ~/.cache
 	ln -s "/tmp/$USER-sxiv-cache" ~/.cache/sxiv
 fi
-# XXX: Remove this in March 2014:
-rm -Rf ~/.sxiv
 
 
 # -------------
