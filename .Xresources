@@ -54,14 +54,15 @@ XTerm.vt100.scrollbar.foreground: #333333
 ! drauf...
 XTerm*omitTranslation: fullscreen
 
-XTerm.vt100.faceName:  DejaVu Sans Mono
-XTerm.vt100.faceSize:  9
-XTerm.vt100.faceSize1: 4
-XTerm.vt100.faceSize2: 6
-XTerm.vt100.faceSize3: 9
-XTerm.vt100.faceSize4: 12
-XTerm.vt100.faceSize5: 16
-XTerm.vt100.faceSize6: 20
+! Notes:
+! - Do not fiddle with Xft.
+! - Do not fiddle with font sizes.
+! - Do not fiddle with font families.
+XTerm.vt100.font:  -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+XTerm.vt100.font3: -xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-*
+XTerm.vt100.font4: -xos4-terminus-medium-*-*-*-16-*-*-*-*-*-iso10646-*
+XTerm.vt100.font5: -xos4-terminus-medium-*-*-*-24-*-*-*-*-*-iso10646-*
+XTerm.vt100.font6: -xos4-terminus-medium-*-*-*-32-*-*-*-*-*-iso10646-*
 
 ! Colors, based on a theme by Thayer:
 XTerm.vt100.background:  #000000
