@@ -11,13 +11,13 @@ source ~/work/dotfiles-pub/.bash_functions
 
 case $TERM in
 	xterm*|rxvt*)
-		export PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/~}${HOSTEXTENSION}\007"'
+		export PROMPT_COMMAND='echo -ne "\033]0;${PWD/$HOME/\~}${HOSTEXTENSION}\007"'
 		;;
 	screen*)
 		# Wenn du im Screen bist, dann setze nur den Screen-Titel, denn
 		# das andere wird vom Screen eh ausgefiltert. Aber: In .screenrc
 		# so gesetzt, dass Screen selbst ggf. 'nen Terminal-Titel setzt.
-		export PROMPT_COMMAND='echo -ne "\033k${PWD/$HOME/~}${HOSTEXTENSION}\033\\"'
+		export PROMPT_COMMAND='echo -ne "\033k${PWD/$HOME/\~}${HOSTEXTENSION}\033\\"'
 		;;
 esac
 
