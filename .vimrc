@@ -509,3 +509,21 @@ endif
 " Settings, die vom Dateityp abhängen
 
 autocmd FileType python setlocal et sta ts=4 sw=4
+
+
+" -------------
+" Very special stuff
+
+if ($TERMINAL_FLAVOUR == "poetry")
+	colorscheme print_bw
+	hi Normal ctermbg=255
+	set nonumber
+	set noruler
+	set showtabline=1
+	set laststatus=1
+	set colorcolumn=
+elseif ($TERMINAL_FLAVOUR == "itsalltext")
+	set wrap
+	set tw=0
+	set colorcolumn=
+endif
