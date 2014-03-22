@@ -183,6 +183,9 @@ xterm-poetry.vt100.foreground:   #000000
 xterm-poetry.vt100.background:   #eeeeee
 xterm-poetry.vt100.cursorColor:  #0000ff
 xterm-poetry.vt100.pointerColor: #0000ff
+xterm-poetry.vt100.color7:       #888888
+xterm-poetry.vt100.color15:      #aaaaaa
+xterm-poetry.vt100.colorBD:      #aaaaaa
 
 
 ! ---------------------------------------------------------------------

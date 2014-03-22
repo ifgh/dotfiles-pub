@@ -515,7 +515,7 @@ autocmd FileType python setlocal et sta ts=4 sw=4
 " Very special stuff
 
 if ($TERMINAL_FLAVOUR == "poetry")
-	colorscheme print_bw
+	colorscheme print_bw_256
 	hi Normal ctermbg=255
 	set nonumber
 	set noruler
